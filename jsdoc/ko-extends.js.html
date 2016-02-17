@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Hawk - JSDoc Source: ko-extends.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.lumen.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Hawk - JSDoc</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="module-ko-ace.html">ko-ace</a></li><li><a href="module-ko-autocomplete.html">ko-autocomplete</a></li><li><a href="module-ko-class.html">ko-class</a></li><li><a href="module-ko-wysiwyg.html">ko-wysiwyg</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="App.html">App</a></li><li><a href="Form.html">Form</a></li><li><a href="FormInput.html">FormInput</a></li><li><a href="Lang.html">Lang</a></li><li><a href="List.html">List</a></li><li><a href="Tab.html">Tab</a></li><li><a href="Tabset.html">Tabset</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+		<div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: ko-extends.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">define('ko-extends', ['jquery', 'ko'], function($, ko){
+    /**
+     * Custom binding for autocomplete. To enable an autocomplete on a text input, apply the attribute ko-autocomplete like this :
+     * &lt;input type="text" ko-autocomplete="{source : 'url|data', search : 'searchProperty', label : 'labelProperty', change : callbackFunction, delay : 400}" />
+     *     - source : If a string is given, the data will be searched on the URL given, else the data object will be used
+     *     - search (default 'label'): If source is an object, 'search' defines the property name the autocomplete will be computed on
+     *     - label (default 'label'): This defines the property that will be displayed in the result list
+     *     - change (default null) : This function will be called when the value of the input changes. The selected line will be injected as first argument
+     *     - delay (default 400) : This property defines the delay after the last key pressed before computing the autocomplete search
+     *
+     * @module ko-autocomplete
+     */
+    ko.bindingHandlers.autocomplete = (function(){
+        /**
+         * Magic keys
+         * @type {Object}
+         */
+        var keyCode = {
+            UP: 38,
+            DOWN: 40,
+            LEFT: 37,
+            RIGHT: 39,
+            ENTER: 13,
+            ESCAPE: 27,
+            TAB: 9
+        };
+
+        var Autocomplete = function(){};
+
+    	Autocomplete.prototype.init = function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+            parameters = ko.unwrap(valueAccessor());
+            var options = {
+            	search : parameters.search || 'label',
+            	label : parameters.label || 'label',
+            	source : parameters.source,
+            	change : parameters.change,
+                delay : parameters.delay || 400
+            };
+            options.value = parameters.value || options.label;
+
+            if(!options.source){
+            	return;
+            }
+
+            /**
+             * Initiate the model that will manage the autocomplete results
+             * @type {Object}
+             */
+            var model = {
+    			result : ko.observableArray([]),
+                selectedItem : ko.observable(null),
+                overItem : ko.observable(null)
+    		};
+
+            /**
+             * Go to the previous element in the result list
+             */
+            model.previous = function(){
+                var index = (this.overItem() ? this.result().indexOf(this.overItem()) : 0) - 1;
+                if(index &lt; 0){
+                    index = this.result().length - 1;
+                }
+                this.overItem(this.result()[index]);
+            }.bind(model);
+
+
+            /**
+             * Got to the next element in the result list
+             */
+            model.next = function(){
+                var index = ((this.overItem() ? this.result().indexOf(this.overItem()) : 0) + 1) % this.result().length;
+                this.overItem(this.result()[index]);
+            }.bind(model);
+
+
+            /**
+             * Select an item in the result list
+             * @param  {Object} data The selected element
+             */
+            model.select = function(data, evt){
+                model.selectedItem(data);
+
+                // Reset the results list
+                model.result([]);
+
+                // Affect element data
+                element.autocompleteData = data;
+                element.value = data[options.value];
+                element.blur();
+            }.bind(model);
+
+
+    		/**
+             * Initialize element
+             * @type {String}
+             */
+            element.autocomplete = "off";
+            $(element)  .wrap('&lt;div class="ko-autocomplete">&lt;/div')
+                        .after(
+                            '&lt;div class="ko-autocomplete-result">' +
+                                '&lt;ul ko-foreach="result" ko-visible="!!result().length">'  +
+                                    '&lt;li ko-attr="{value: $data.value}" ko-html="label" ko-event="{mousedown : $parent.select.bind($parent)}" ko-class="{hover : $parent.overItem() == $data}">&lt;/li>' +
+                                '&lt;/ul>' +
+                            '&lt;/div>'
+            );
+
+
+            /**
+             * The timeout for compute filter delay
+             */
+            var ajaxTimeout;
+
+            /**
+             * Listen on the element events
+             */
+            $(element).on({
+                /*
+                 * Display the result when the data changes
+                 */
+                input : function(){
+                    element.autocompleteData = null;
+                	var value = element.value;
+
+                    if(!value){
+                        model.result([]);
+                        model.selectedItem(null);
+                        return;
+                    }
+
+            		// Search on an array
+               		if(ko.isObservable(options.source) || options.source instanceof Array){
+               			var source = ko.isObservable(options.source) ? options.source() : options.source;
+               			// Filter the source by the
+               			var filters = ko.utils.arrayFilter(source, function(item){
+               				return item[options.search].match(element.value);
+               			});
+
+               			// Change the output items to match to the autocomplete parameters
+               			var displayed = ko.utils.arrayMap(filters, function(item){
+               				item.label = item[options.label];
+               				item.value = item[options.value];
+
+               				return item;
+               			});
+
+               			// Display the result to the user
+               			model.result(displayed);
+               		}
+               		else if(typeof options.source === "string"){
+               			clearTimeout(ajaxTimeout);
+               			ajaxTimeout = setTimeout(function(){
+        	       			// Load the result by AJAX request. In this case, search, value, and label parameters are not used
+        	       			$.ajax({
+        	       				url : options.source,
+        	       				type : 'get',
+        	       				dataType : 'json',
+        	       				data : {
+        	       					q : element.value,
+        	       				}
+        	       			})
+        	       			.done(function(data){
+        	       				model.result(data);
+                                if(! data.length){
+                                    model.selectedItem(null);
+                                }
+        	       			});
+               			}, options.delay);
+               		}
+               	},
+
+                /*
+                 * Blur the input
+                 * @param  {Event} event The blur event
+                 */
+                blur : function(event){
+                    if(! this.autocompleteData || this.autocompleteData !== model.selectedItem()){
+                        model.selectedItem(null);
+                        this.autocompleteData = null;
+                    }
+
+                    model.result([]);
+
+                    if(options.change){
+                        options.change.apply(viewModel, [this.autocompleteData]);
+                    }
+                },
+
+                /*
+                 * Navigate in the result list
+                 * @param  {Event} event The keydown event
+                 */
+                keydown : function(event){
+                    if(model.result().length){
+                        switch(event.keyCode){
+                            // Move up
+                            case keyCode.UP :
+                                model.previous();
+                                break;
+
+                            // Move down
+                            case keyCode.DOWN :
+                                model.next();
+                                break;
+
+                            // Tab key
+                            case keyCode.TAB :
+                                if(event.shiftKey){
+                                    // Go preivous element
+                                    model.previous();
+                                }
+                                else{
+                                    model.next();
+                                }
+                                break;
+
+                            // Select item
+                            case keyCode.ENTER :
+                                if(!model.overItem()){
+                                    return true;
+                                }
+
+                                model.select(model.overItem());
+                                break;
+
+                            // Hide the result list
+                            case keyCode.ESCAPE :
+                                model.result([]);
+                                break;
+
+                            default :
+                                return true;
+                        }
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                }
+            });
+
+
+            /**
+             * Apply the model to the node
+             */
+           	ko.applyBindings(model, $(element).next('.ko-autocomplete-result').get(0));
+        };
+
+
+    	return new Autocomplete();
+    })();
+
+
+    /**
+     * Rename the binding css to class
+     *
+     * @module ko-class
+     */
+    ko.bindingHandlers.class = ko.bindingHandlers.css;
+
+
+    /**
+     * Custom binding for Ace. This applies the code editor ace on the text area
+     * &lt;textarea ko-ace="{theme : 'aceTheme', language : 'php', readonly : true, change : callbackFunction}">&lt;/textarea>
+     *     - theme (default 'chrome') : The ace theme
+     *     - language (mandatory): The programming language to use
+     *     - readonly (default false) : If set to true, the editor will only highlight the code
+     *     - chnage : Callback when the value of the editor changes
+     *
+     * @see https://ace.c9.io/#nav=about
+     * @module  ko-ace
+     */
+    ko.bindingHandlers.ace = {
+        update : function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+            require(['ace'], function(ace){
+                var parameters = ko.unwrap(valueAccessor());
+
+                ace.config.set("modePath", app.baseUrl + "ext/ace/");
+                ace.config.set("workerPath", app.baseUrl + "ext/ace/") ;
+                ace.config.set("themePath", app.baseUrl + "ext/ace/");
+
+                var editor = ace.edit(element.id);
+                editor.setTheme("ace/theme/" + (parameters.theme || 'chrome'));
+                editor.getSession().setMode("ace/mode/" + (parameters.language));
+                editor.setShowPrintMargin(false);
+                editor.setReadOnly( parameters.readonly || false);
+
+                editor.getSession().on("change", function(event){
+                    var value = editor.getValue();
+                    if(parameters.change){
+                        parameters.change(value);
+                    }
+                });
+            });
+        }
+    };
+
+
+    /**
+     * Custom binding for CKEditor
+     *
+     * &lt;textarea ko-wysiwyg>&lt;/textarea>
+     *
+     * @module  ko-wysiwyg
+     * @see http://ckeditor.com/
+     */
+    ko.bindingHandlers.wysiwyg = {
+        update : function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+            require(['ckeditor'], function(CKEDITOR){
+                if(!CKEDITOR.dom.element.get(element.id).getEditor()){
+                    var editor = CKEDITOR.replace(element.id, {
+                        language : app.language,
+                        removeButtons : 'Save,Scayt,Rtl,Ltr,Language,Flash',
+                        entities : false,
+                        on : {
+                            change : function(event){
+                                $("#" + element.id).val(event.editor.getData()).trigger('change');
+                            }
+                        }
+                    });
+                    if(document.getElementById('theme-base-stylesheet')){
+                        editor.addContentsCss(document.getElementById('theme-base-stylesheet').href);
+                    }
+                }
+            });
+        }
+    };
+
+    /**
+     * Extend the knockout syntax to allow devs to write ko-{bind}="value" as tag attribute
+     */
+    ko.bindingProvider.instance.preprocessNode = function(node){
+        var dataBind = node.dataset &amp;&amp; node.dataset.bind || "";
+
+        for(var name in ko.bindingHandlers){
+            var attrName = 'ko-' + name;
+            if(node.getAttribute &amp;&amp; node.getAttribute(attrName)){
+                dataBind += (dataBind ? ',' : '') + name + ': ' + node.getAttribute(attrName);
+            }
+        }
+        if(dataBind){
+            node.dataset.bind = dataBind;
+        }
+    }
+});</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+<div class="modal fade" id="searchResults">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Search results</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+	
+		on 29/3/2016
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+<script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		SearcherDisplay.init();
+	});
+</script>
+
+</body>
+</html>
