@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Hawk\NumberInput | Hawk - PHP documentation</title>
+	<title>Class Hawk\Icon | Hawk - PHP documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
@@ -104,7 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
-				<li><a href="class-Hawk.Icon.html">Icon</a></li>
+				<li class="active"><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -119,7 +119,7 @@
 				<li><a href="class-Hawk.MenuItem.html">MenuItem</a></li>
 				<li><a href="class-Hawk.Model.html">Model</a></li>
 				<li><a href="class-Hawk.NoSidebarTab.html">NoSidebarTab</a></li>
-				<li class="active"><a href="class-Hawk.NumberInput.html">NumberInput</a></li>
+				<li><a href="class-Hawk.NumberInput.html">NumberInput</a></li>
 				<li><a href="class-Hawk.ObjectInput.html">ObjectInput</a></li>
 				<li><a href="class-Hawk.Option.html">Option</a></li>
 				<li><a href="class-Hawk.Panel.html">Panel</a></li>
@@ -184,38 +184,29 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class NumberInput</h1>
+	<h1>Class Icon</h1>
 
 
 	<div class="description">
-	<p>This class describes the behavio of number inputs</p>
+	<p>This class is used to display an icon</p>
 	</div>
 
 	<dl class="tree well">
 		<dd style="padding-left:0px">
-			<a href="class-Hawk.FormInput.html"><span>Hawk\FormInput</span></a>
+			<a href="class-Hawk.View.html"><span>Hawk\View</span></a>
 			
 			
-			 uses 
-					<a href="class-Hawk.Utils.html"><span>Hawk\Utils</span></a>
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Hawk\NumberInput</span></b>			
+<b><span>Hawk\Icon</span></b>			
 			
 			
 		</dd>
 	</dl>
 
 
-	<div>
-		<h3>Direct known subclasses</h3>
-		<p class="elementList">
-			<code><a href="class-Hawk.FloatInput.html">Hawk\FloatInput</a></code>, 
-			<code><a href="class-Hawk.IntegerInput.html">Hawk\IntegerInput</a></code>
-		</p>
-	</div>
 
 
 
@@ -226,9 +217,9 @@
 		
 		
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
-		<b>Package:</b> Form\Input<br>
+		<b>Package:</b> Layout<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.NumberInput.html#11-51" title="Go to source code">Form/NumberInput.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Icon.html#11-38" title="Go to source code">layout/Icon.php</a>
 		<br>
 	</div>
 
@@ -237,42 +228,42 @@
 		<div class="panel panel-default">
 			<div class="panel-heading"><h2>Methods summary</h2></div>
 			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="check" id="_check">
+		<tr data-order="make" id="_make">
 
 			<td class="attributes"><code>
-				 public 
-				boolean
+				 public static
+				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_check">#</a>
-			<code><a href="source-class-Hawk.NumberInput.html#19-50" title="Go to source code">check</a>( <span><code><a href="class-Hawk.Form.html">Hawk\Form</a></code> <var>&amp; $form</var> = <span class="php-keyword1">null</span></span> )</code>
+			<a class="anchor" href="#_make">#</a>
+			<code><a href="source-class-Hawk.Icon.html#18-37" title="Go to source code">make</a>( <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
-				<p>Check the submitted value of the input</p>
+				<p>Display the icon</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Check the submitted value of the input</p>
+				<p>Display the icon</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$form</var></dt>
-						<dd>The form the input is associated with</dd>
+						<dt><var>$data</var></dt>
+						<dd>The data to inject in the view</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>True if the submitted value is valid, else false
+						string<br>The generated HTML
 					</div>
 
 
 
 					<h4>Overrides</h4>
-					<div class="list"><code><a href="class-Hawk.FormInput.html#_check">Hawk\FormInput::check</a></code></div>
+					<div class="list"><code><a href="class-Hawk.View.html#_make">Hawk\View::make</a></code></div>
 
 			</div>
 			</div></td>
@@ -281,27 +272,17 @@
 		</div>
 
 		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Hawk.FormInput.html#methods">Hawk\FormInput</a></h3></div>
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Hawk.View.html#methods">Hawk\View</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-Hawk.FormInput.html#___construct">__construct()</a></code>, 
-				<code><a href="class-Hawk.FormInput.html#___toString">__toString()</a></code>, 
-				<code><a href="class-Hawk.FormInput.html#_create">create()</a></code>, 
-				<code><a href="class-Hawk.FormInput.html#_dbvalue">dbvalue()</a></code>, 
-				<code><a href="class-Hawk.FormInput.html#_display">display()</a></code>, 
-				<code><a href="class-Hawk.FormInput.html#_getInstance">getInstance()</a></code>, 
-				<code><a href="class-Hawk.FormInput.html#_setParam">setParam()</a></code>, 
-				<code><a href="class-Hawk.FormInput.html#_setValue">setValue()</a></code>
+				<code><a href="class-Hawk.View.html#___construct">__construct()</a></code>, 
+				<code><a href="class-Hawk.View.html#_addData">addData()</a></code>, 
+				<code><a href="class-Hawk.View.html#_display">display()</a></code>, 
+				<code><a href="class-Hawk.View.html#_getData">getData()</a></code>, 
+				<code><a href="class-Hawk.View.html#_makeFromString">makeFromString()</a></code>, 
+				<code><a href="class-Hawk.View.html#_setData">setData()</a></code>
 			</p>
 		</div>
 
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods used from <a href="class-Hawk.Utils.html#methods">Hawk\Utils</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Hawk.Utils.html#_debug">debug()</a></code>, 
-				<code><a href="class-Hawk.Utils.html#_getSerializedVersion">getSerializedVersion()</a></code>, 
-				<code><a href="class-Hawk.Utils.html#_map">map()</a></code>
-			</p>
-		</div>
 
 
 
@@ -310,87 +291,21 @@
 
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Constants summary</h2></div>
-			<table class="summary table table-bordered table-striped constants" id="constants">
-			<tr data-order="TYPE" id="TYPE">
-
-				<td class="attributes"><code>string</code></td>
-				<td class="name">
-					<code>
-						<a href="source-class-Hawk.NumberInput.html#17" title="Go to source code"><b>TYPE</b></a>
-					</code>
-
-					<div class="description short">
-						
-					</div>
-
-					<div class="description detailed hidden">
-						
-
-					</div>
-				</td>
-				<td class="value">
-					<div>
-						<a href="#TYPE" class="anchor">#</a>
-						<code><span class="php-quote">&quot;number&quot;</span></code>
-					</div>
-				</td>
-			</tr>
-			</table>
 		</div>
 
 		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Constants inherited from <a href="class-Hawk.FormInput.html#constants">Hawk\FormInput</a></h3></div>
+            <div class="panel-heading"><h3>Constants inherited from <a href="class-Hawk.View.html#constants">Hawk\View</a></h3></div>
 			<p class="elementList">
-				<code><a href="class-Hawk.FormInput.html#INDEPENDANT"><b>INDEPENDANT</b></a></code>
+				<code><a href="class-Hawk.View.html#ASSIGN_REGEX"><b>ASSIGN_REGEX</b></a></code>, 
+				<code><a href="class-Hawk.View.html#BLOCK_END_REGEX"><b>BLOCK_END_REGEX</b></a></code>, 
+				<code><a href="class-Hawk.View.html#BLOCK_START_REGEX"><b>BLOCK_START_REGEX</b></a></code>, 
+				<code><a href="class-Hawk.View.html#ECHO_REGEX"><b>ECHO_REGEX</b></a></code>, 
+				<code><a href="class-Hawk.View.html#PLUGINS_VIEW"><b>PLUGINS_VIEW</b></a></code>, 
+				<code><a href="class-Hawk.View.html#PLUGIN_ARGUMENTS_REGEX"><b>PLUGIN_ARGUMENTS_REGEX</b></a></code>, 
+				<code><a href="class-Hawk.View.html#PLUGIN_REGEX"><b>PLUGIN_REGEX</b></a></code>, 
+				<code><a href="class-Hawk.View.html#TRANSLATION_REGEX"><b>TRANSLATION_REGEX</b></a></code>
 			</p>
 		</div>
-
-
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Properties summary</h2></div>
-		</div>
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties inherited from <a href="class-Hawk.FormInput.html#properties">Hawk\FormInput</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Hawk.FormInput.html#$after"><var>$after</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$attr"><var>$attr</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$attributes"><var>$attributes</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$before"><var>$before</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$beforeLabel"><var>$beforeLabel</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$class"><var>$class</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$dataType"><var>$dataType</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$disabled"><var>$disabled</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$emptyValue"><var>$emptyValue</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$errorAt"><var>$errorAt</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$field"><var>$field</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$hidden"><var>$hidden</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$id"><var>$id</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$independant"><var>$independant</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$insert"><var>$insert</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$label"><var>$label</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$labelClass"><var>$labelClass</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$labelStyle"><var>$labelStyle</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$mask"><var>$mask</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$maxlength"><var>$maxlength</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$name"><var>$name</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$nl"><var>$nl</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$notDisplayed"><var>$notDisplayed</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$pattern"><var>$pattern</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$placeholder"><var>$placeholder</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$readonly"><var>$readonly</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$required"><var>$required</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$style"><var>$style</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$title"><var>$title</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$tpl"><var>$tpl</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$unique"><var>$unique</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$validators"><var>$validators</var></a></code>, 
-				<code><a href="class-Hawk.FormInput.html#$value"><var>$value</var></a></code>
-			</p>
-		</div>
-
-
 
 
 

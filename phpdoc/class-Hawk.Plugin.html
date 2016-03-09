@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -204,7 +205,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core\Plugin<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Plugin.html#9-705" title="Go to source code">Plugin.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Plugin.html#11-794" title="Go to source code">Plugin.php</a>
 		<br>
 	</div>
 
@@ -224,7 +225,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#115-131" title="Go to source code">get</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#138-156" title="Go to source code">get</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a plugin instance from it name</p>
@@ -262,7 +263,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_current">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#134-142" title="Go to source code">current</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#159-168" title="Go to source code">current</a>( )</code>
 
 			<div class="description short">
 				<p>Get the plugin containing the file where this function is called</p>
@@ -295,7 +296,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFilePlugin">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#145-175" title="Go to source code">getFilePlugin</a>( <span>string <var>$file</var></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#171-203" title="Go to source code">getFilePlugin</a>( <span>string <var>$file</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the plugin contaning a given filename</p>
@@ -333,14 +334,14 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAll">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#178-213" title="Go to source code">getAll</a>( <span>boolean <var>$includeMain</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$loadConf</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#206-245" title="Go to source code">getAll</a>( <span>boolean <var>$includeMain</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$loadConf</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>get all the plugins</p>
+				<p>Get all the plugins</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>get all the plugins</p>
+				<p>Get all the plugins</p>
 
 
 					<h4>Parameters</h4>
@@ -373,7 +374,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getActivePlugins">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#216-227" title="Go to source code">getActivePlugins</a>( <span>boolean <var>$includeMain</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#248-263" title="Go to source code">getActivePlugins</a>( <span>boolean <var>$includeMain</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Get all the active plugins</p>
@@ -411,7 +412,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMainPlugins">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#230-238" title="Go to source code">getMainPlugins</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#266-277" title="Go to source code">getMainPlugins</a>( )</code>
 
 			<div class="description short">
 				<p>Get the main plugins</p>
@@ -424,9 +425,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br><ul>
-<li>The list of plugin instances</li>
-</ul>
+						array<br>The list of plugin instances
 					</div>
 
 
@@ -446,7 +445,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#242-248" title="Go to source code">getName</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#281-288" title="Go to source code">getName</a>( )</code>
 
 			<div class="description short">
 				<p>Get the plugin name</p>
@@ -479,7 +478,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isMainPlugin">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#251-257" title="Go to source code">isMainPlugin</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#291-298" title="Go to source code">isMainPlugin</a>( )</code>
 
 			<div class="description short">
 				<p>Check if the plugin is a main plugin</p>
@@ -512,7 +511,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOptions">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#259-269" title="Go to source code">getOptions</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#300-311" title="Go to source code">getOptions</a>( )</code>
 
 			<div class="description short">
 				<p>Get the plugin options</p>
@@ -545,7 +544,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDefinition">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#272-282" title="Go to source code">getDefinition</a>( <span>string <var>$prop</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#314-328" title="Go to source code">getDefinition</a>( <span>string <var>$prop</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Get the plugin data from the manifest</p>
@@ -558,12 +557,14 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$prop</var></dt>
-						<dd>If set, the method will return the value of the definition property $prop, else it will return the whole definition array</dd>
+						<dd><p>If set, the method will return the value of the definition property $prop.
+                     If not set, it will return the whole definition array</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						mixed<br>The plugin definition property if $prop is set, or the whoel plugin definition if $prop is not set
+						mixed<br><p>The plugin definition property if $prop is set,
+                  or the whole plugin definition if $prop is not set</p>
 					</div>
 
 
@@ -583,7 +584,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRootDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#285-291" title="Go to source code">getRootDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#331-338" title="Go to source code">getRootDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the root directory of the plugin</p>
@@ -616,16 +617,18 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStartFile">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#294-301" title="Go to source code">getStartFile</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#341-350" title="Go to source code">getStartFile</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the start file of the plugin.
-The start file is the file start.php, at the root of the plugin directory, that defines the routes, widgets, and event listenter of the plugin.</p>
+The start file is the file start.php, at the root of the plugin directory,
+that defines the routes, widgets, and event listenter of the plugin.</p>
 			</div>
 
 			<div class="description detailed hidden">
 				<p>Returns the start file of the plugin.
-The start file is the file start.php, at the root of the plugin directory, that defines the routes, widgets, and event listenter of the plugin.</p>
+The start file is the file start.php, at the root of the plugin directory,
+that defines the routes, widgets, and event listenter of the plugin.</p>
 
 
 
@@ -651,7 +654,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getControllersDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#304-310" title="Go to source code">getControllersDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#353-360" title="Go to source code">getControllersDir</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the directory of the plugin containing the controllers</p>
@@ -684,7 +687,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLangDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#313-319" title="Go to source code">getLangDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#363-370" title="Go to source code">getLangDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin language files</p>
@@ -717,7 +720,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getModelsDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#321-327" title="Go to source code">getModelsDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#372-379" title="Go to source code">getModelsDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin models</p>
@@ -750,7 +753,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWidgetsDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#330-336" title="Go to source code">getWidgetsDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#382-389" title="Go to source code">getWidgetsDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin widgets</p>
@@ -783,7 +786,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getViewsDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#339-345" title="Go to source code">getViewsDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#392-399" title="Go to source code">getViewsDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin views</p>
@@ -816,7 +819,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getView">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#348-363" title="Go to source code">getView</a>( <span>string <var>$view</var></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#402-419" title="Go to source code">getView</a>( <span>string <var>$view</var></span> )</code>
 
 			<div class="description short">
 				<p>Return the full path of a view in the plugin</p>
@@ -854,7 +857,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStaticDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#366-372" title="Go to source code">getStaticDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#422-429" title="Go to source code">getStaticDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin static files (js, css, images)</p>
@@ -887,7 +890,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicStaticDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#374-380" title="Go to source code">getPublicStaticDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#431-438" title="Go to source code">getPublicStaticDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin public static files (acessible by HTTP requests)</p>
@@ -920,7 +923,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getStaticUrl">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#383-407" title="Go to source code">getStaticUrl</a>( <span>string <var>$basename</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#441-467" title="Go to source code">getStaticUrl</a>( <span>string <var>$basename</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Return the url of a static file in the plugin, or the directory containing static files if $basename is empty</p>
@@ -958,7 +961,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getJsDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#413-419" title="Go to source code">getJsDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#473-480" title="Go to source code">getJsDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin JavaScript files</p>
@@ -991,7 +994,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicJsDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#422-428" title="Go to source code">getPublicJsDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#483-490" title="Go to source code">getPublicJsDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin public JavaScript files (accessible by HTTP requests)</p>
@@ -1024,14 +1027,16 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getJsUrl">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#430-442" title="Go to source code">getJsUrl</a>( <span>string <var>$basename</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#492-507" title="Go to source code">getJsUrl</a>( <span>string <var>$basename</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				<p>Return the URL of a public javascript file, or the URL of the directory containing public javascript files if $basename is empty</p>
+				<p>Return the URL of a public javascript file,
+or the URL of the directory containing public javascript files if $basename is empty</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Return the URL of a public javascript file, or the URL of the directory containing public javascript files if $basename is empty</p>
+				<p>Return the URL of a public javascript file,
+or the URL of the directory containing public javascript files if $basename is empty</p>
 
 
 					<h4>Parameters</h4>
@@ -1062,7 +1067,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLessDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#449-455" title="Go to source code">getLessDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#514-521" title="Go to source code">getLessDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin CSS files</p>
@@ -1095,7 +1100,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicCssDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#458-464" title="Go to source code">getPublicCssDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#524-531" title="Go to source code">getPublicCssDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin public CSS files (accessible by HTTP requests)</p>
@@ -1128,14 +1133,16 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCssUrl">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#467-500" title="Go to source code">getCssUrl</a>( <span>string <var>$basename</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#534-572" title="Go to source code">getCssUrl</a>( <span>string <var>$basename</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
-				<p>Return the URL of a public CSS file, or the URL of the directory containing public CSS files if $basename is empty</p>
+				<p>Return the URL of a public CSS file,
+or the URL of the directory containing public CSS files if $basename is empty</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Return the URL of a public CSS file, or the URL of the directory containing public CSS files if $basename is empty</p>
+				<p>Return the URL of a public CSS file,
+or the URL of the directory containing public CSS files if $basename is empty</p>
 
 
 					<h4>Parameters</h4>
@@ -1166,7 +1173,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUserfilesDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#505-511" title="Go to source code">getUserfilesDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#577-584" title="Go to source code">getUserfilesDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the plugin files due to user actions</p>
@@ -1199,7 +1206,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPublicUserfilesDir">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#514-520" title="Go to source code">getPublicUserfilesDir</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#587-594" title="Go to source code">getPublicUserfilesDir</a>( )</code>
 
 			<div class="description short">
 				<p>Return the directory containing the public (accessible by HTTP requests) plugin files due to user actions</p>
@@ -1232,14 +1239,16 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUserfilesUrl">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#523-536" title="Go to source code">getUserfilesUrl</a>( <span>string <var>$basename</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#597-613" title="Go to source code">getUserfilesUrl</a>( <span>string <var>$basename</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				<p>Return the URL of a static userfile, or the URL of the directory contaning the userfiles, if $basename is empty</p>
+				<p>Return the URL of a static userfile,
+or the URL of the directory contaning the userfiles, if $basename is empty</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Return the URL of a static userfile, or the URL of the directory contaning the userfiles, if $basename is empty</p>
+				<p>Return the URL of a static userfile,
+or the URL of the directory contaning the userfiles, if $basename is empty</p>
 
 
 					<h4>Parameters</h4>
@@ -1270,7 +1279,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isInstalled">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#539-545" title="Go to source code">isInstalled</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#616-623" title="Go to source code">isInstalled</a>( )</code>
 
 			<div class="description short">
 				<p>Check if the plugin is installed. The plugin is installed if it appears in the database</p>
@@ -1303,7 +1312,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNamespaceByName">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#548-558" title="Go to source code">getNamespaceByName</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#626-639" title="Go to source code">getNamespaceByName</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a plugin namespace by it name</p>
@@ -1337,7 +1346,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getNamespace">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#561-567" title="Go to source code">getNamespace</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#642-649" title="Go to source code">getNamespace</a>( )</code>
 
 			<div class="description short">
 				<p>Get the namespace used for all files in the plugin. The namespace is generated from the plugin name</p>
@@ -1370,7 +1379,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInstallerInstance">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#569-586" title="Go to source code">getInstallerInstance</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#651-669" title="Go to source code">getInstallerInstance</a>( )</code>
 
 			<div class="description short">
 				<p>Instance the plugin installer</p>
@@ -1403,7 +1412,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_install">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#588-607" title="Go to source code">install</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#671-692" title="Go to source code">install</a>( )</code>
 
 			<div class="description short">
 				<p>Install the plugin</p>
@@ -1432,7 +1441,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_uninstall">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#610-629" title="Go to source code">uninstall</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#695-716" title="Go to source code">uninstall</a>( )</code>
 
 			<div class="description short">
 				<p>Uninstall the plugin</p>
@@ -1461,7 +1470,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isActive">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#631-637" title="Go to source code">isActive</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#718-725" title="Go to source code">isActive</a>( )</code>
 
 			<div class="description short">
 				<p>Check if the plugin is active</p>
@@ -1494,7 +1503,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_activate">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#640-658" title="Go to source code">activate</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#728-746" title="Go to source code">activate</a>( )</code>
 
 			<div class="description short">
 				<p>Activate the plugin in the database</p>
@@ -1523,7 +1532,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deactivate">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#661-679" title="Go to source code">deactivate</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#749-767" title="Go to source code">deactivate</a>( )</code>
 
 			<div class="description short">
 				<p>Deactive the plugin</p>
@@ -1552,7 +1561,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_update">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#682-693" title="Go to source code">update</a>( <span>string <var>$version</var></span> )</code>
+			<code><a href="source-class-Hawk.Plugin.html#770-782" title="Go to source code">update</a>( <span>string <var>$version</var></span> )</code>
 
 			<div class="description short">
 				<p>Update the plugin to a given version</p>
@@ -1586,7 +1595,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_delete">#</a>
-			<code><a href="source-class-Hawk.Plugin.html#695-704" title="Go to source code">delete</a>( )</code>
+			<code><a href="source-class-Hawk.Plugin.html#784-793" title="Go to source code">delete</a>( )</code>
 
 			<div class="description short">
 				<p>Compelete deletion of plugin</p>
@@ -1622,7 +1631,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Plugin.html#14-17" title="Go to source code"><b>TABLE</b></a>
+						<a href="source-class-Hawk.Plugin.html#17-20" title="Go to source code"><b>TABLE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1646,7 +1655,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Plugin.html#19-22" title="Go to source code"><b>MANIFEST_BASENAME</b></a>
+						<a href="source-class-Hawk.Plugin.html#22-25" title="Go to source code"><b>MANIFEST_BASENAME</b></a>
 					</code>
 
 					<div class="description short">
@@ -1670,7 +1679,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Plugin.html#24-27" title="Go to source code"><b>NAME_PATTERN</b></a>
+						<a href="source-class-Hawk.Plugin.html#27-30" title="Go to source code"><b>NAME_PATTERN</b></a>
 					</code>
 
 					<div class="description short">
@@ -1705,7 +1714,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Plugin.html#61-64" title="Go to source code"><var>$mainPlugins</var></a>
+					<a href="source-class-Hawk.Plugin.html#76-81" title="Go to source code"><var>$mainPlugins</var></a>
 
 				<div class="description short">
 					<p>The application main plugins, not removable or editable, used for the application core</p>
@@ -1730,7 +1739,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Plugin.html#73-76" title="Go to source code"><var>$forbiddenNames</var></a>
+					<a href="source-class-Hawk.Plugin.html#92-97" title="Go to source code"><var>$forbiddenNames</var></a>
 
 				<div class="description short">
 					<p>Forbidden plugin names</p>
@@ -1763,7 +1772,7 @@ The start file is the file start.php, at the root of the plugin directory, that 
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

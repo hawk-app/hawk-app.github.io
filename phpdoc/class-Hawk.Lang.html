@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -204,7 +205,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Lang.html#10-352" title="Go to source code">Lang.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Lang.html#11-388" title="Go to source code">Lang.php</a>
 		<br>
 	</div>
 
@@ -224,7 +225,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_keys">#</a>
-			<code><a href="source-class-Hawk.Lang.html#200-210" title="Go to source code">keys</a>( <span>string <var>$plugin</var></span>, <span>string <var>$language</var> = LANGUAGE</span>, <span>string <var>$reload</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Hawk.Lang.html#220-231" title="Go to source code">keys</a>( <span>string <var>$plugin</var></span>, <span>string <var>$language</var> = LANGUAGE</span>, <span>string <var>$reload</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Get the translations of a language file</p>
@@ -262,14 +263,14 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_saveOriginCache">#</a>
-			<code><a href="source-class-Hawk.Lang.html#213-218" title="Go to source code">saveOriginCache</a>( )</code>
+			<code><a href="source-class-Hawk.Lang.html#234-239" title="Go to source code">saveOriginCache</a>( )</code>
 
 			<div class="description short">
-				<p>Save the cache fil containing the origin paths</p>
+				<p>Save the cache file containing the origin paths</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Save the cache fil containing the origin paths</p>
+				<p>Save the cache file containing the origin paths</p>
 
 
 
@@ -284,14 +285,14 @@
 
 			<td class="attributes"><code>
 				 public static
-				
+				boolean
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_exists">#</a>
-			<code><a href="source-class-Hawk.Lang.html#223-234" title="Go to source code">exists</a>( <span>string <var>$langKey</var></span> )</code>
+			<code><a href="source-class-Hawk.Lang.html#244-258" title="Go to source code">exists</a>( <span>string <var>$langKey</var></span> )</code>
 
 			<div class="description short">
 				<p>Check if a language key exists</p>
@@ -307,6 +308,10 @@
 						<dd>The key to check existence</dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>True if the language key exists, else false
+					</div>
 
 
 
@@ -325,14 +330,14 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Hawk.Lang.html#239-288" title="Go to source code">get</a>( <span>string <var>$langKey</var></span>, <span>array <var>$param</var> = <span class="php-keyword1">array</span>()</span>, <span>mixed <var>$number</var> = <span class="php-num">0</span></span>, <span>string <var>$language</var> = LANGUAGE</span> )</code>
+			<code><a href="source-class-Hawk.Lang.html#263-320" title="Go to source code">get</a>( <span>string <var>$langKey</var></span>, <span>array <var>$param</var> = <span class="php-keyword1">array</span>()</span>, <span>mixed <var>$number</var> = <span class="php-num">0</span></span>, <span>string <var>$language</var> = LANGUAGE</span> )</code>
 
 			<div class="description short">
-				<p>get the translation of a language key in the given language</p>
+				<p>Get the translation of a language key in the given language</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>get the translation of a language key in the given language</p>
+				<p>Get the translation of a language key in the given language</p>
 
 
 					<h4>Parameters</h4>
@@ -369,26 +374,26 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addKeysToJavascript">#</a>
-			<code><a href="source-class-Hawk.Lang.html#292-306" title="Go to source code">addKeysToJavascript</a>( <span>string <var>$keys</var></span>, <span>string <var>$key2</var>,…</span> )</code>
+			<code><a href="source-class-Hawk.Lang.html#324-340" title="Go to source code">addKeysToJavascript</a>( <span>string <var>$keys</var></span> )</code>
 
 			<div class="description short">
-				<p>Add language keys to Javascript</p>
+				<p>Add language keys to Javascript. To add several keys, you can call one time this function, each parameters
+being a language key that wille be added to JavaScript</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Add language keys to Javascript</p>
+				<p>Add language keys to Javascript. To add several keys, you can call one time this function, each parameters
+being a language key that wille be added to JavaScript</p>
 
 					<h4>Deprecated</h4>
 					<div class="list">
-							since version 0.8.0, use Controller::addKeysToJavascript instead<br>
+							since version 0.7.0, use Controller::addKeysToJavascript instead<br>
 					</div>
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$keys</var></dt>
-						<dd>$key1 The first key</dd>
-						<dt><var>$key2</var>,…</dt>
-						<dd>.....</dd>
+						<dd>$keys The keys to add</dd>
 					</dl></div>
 
 
@@ -409,7 +414,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUserTranslations">#</a>
-			<code><a href="source-class-Hawk.Lang.html#310-319" title="Go to source code">getUserTranslations</a>( <span>string <var>$plugin</var></span>, <span>string <var>$language</var></span> )</code>
+			<code><a href="source-class-Hawk.Lang.html#344-354" title="Go to source code">getUserTranslations</a>( <span>string <var>$plugin</var></span>, <span>string <var>$language</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the translations data the user customized on the interface</p>
@@ -445,7 +450,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_saveUserTranslations">#</a>
-			<code><a href="source-class-Hawk.Lang.html#321-351" title="Go to source code">saveUserTranslations</a>( <span>string <var>$plugin</var></span>, <span>string <var>$language</var></span>, <span>array <var>$data</var></span> )</code>
+			<code><a href="source-class-Hawk.Lang.html#356-387" title="Go to source code">saveUserTranslations</a>( <span>string <var>$plugin</var></span>, <span>string <var>$language</var></span>, <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Save translated data the user customized on the interface</p>
@@ -490,7 +495,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Lang.html#16" title="Go to source code"><b>DEFAULT_LANGUAGE</b></a>
+						<a href="source-class-Hawk.Lang.html#18" title="Go to source code"><b>DEFAULT_LANGUAGE</b></a>
 					</code>
 
 					<div class="description short">
@@ -514,7 +519,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Lang.html#17" title="Go to source code"><b>ORIGIN_CACHE_FILE</b></a>
+						<a href="source-class-Hawk.Lang.html#19" title="Go to source code"><b>ORIGIN_CACHE_FILE</b></a>
 					</code>
 
 					<div class="description short">
@@ -538,7 +543,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Lang.html#18" title="Go to source code"><b>CACHE_DIR</b></a>
+						<a href="source-class-Hawk.Lang.html#20" title="Go to source code"><b>CACHE_DIR</b></a>
 					</code>
 
 					<div class="description short">
@@ -562,7 +567,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Lang.html#19" title="Go to source code"><b>TRANSLATIONS_DIR</b></a>
+						<a href="source-class-Hawk.Lang.html#21" title="Go to source code"><b>TRANSLATIONS_DIR</b></a>
 					</code>
 
 					<div class="description short">
@@ -594,7 +599,7 @@
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

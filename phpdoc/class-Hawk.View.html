@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -196,6 +197,7 @@
 		<h3>Direct known subclasses</h3>
 		<p class="elementList">
 			<code><a href="class-Hawk.Dialogbox.html">Hawk\Dialogbox</a></code>, 
+			<code><a href="class-Hawk.Icon.html">Hawk\Icon</a></code>, 
 			<code><a href="class-Hawk.LeftSidebarTab.html">Hawk\LeftSidebarTab</a></code>, 
 			<code><a href="class-Hawk.NoSidebarTab.html">Hawk\NoSidebarTab</a></code>, 
 			<code><a href="class-Hawk.Panel.html">Hawk\Panel</a></code>, 
@@ -215,7 +217,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> View<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.View.html#9-235" title="Go to source code">View.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.View.html#11-298" title="Go to source code">View.php</a>
 		<br>
 	</div>
 
@@ -235,7 +237,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.View.html#53-75" title="Go to source code">__construct</a>( <span>string <var>$file</var></span> )</code>
+			<code><a href="source-class-Hawk.View.html#89-112" title="Go to source code">__construct</a>( <span>string <var>$file</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -269,7 +271,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setData">#</a>
-			<code><a href="source-class-Hawk.View.html#78-86" title="Go to source code">setData</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.View.html#115-125" title="Go to source code">setData</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Set data to display in the view</p>
@@ -282,7 +284,7 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$data</var></dt>
-						<dd>data to insert in the view. The keys of the data will become variables in the view</dd>
+						<dd>The data to insert in the view. The keys of the data will become variables in the view</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -307,7 +309,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addData">#</a>
-			<code><a href="source-class-Hawk.View.html#89-97" title="Go to source code">addData</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.View.html#128-138" title="Go to source code">addData</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Add data to display in the view</p>
@@ -320,7 +322,7 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$data</var></dt>
-						<dd>data to add in the view</dd>
+						<dd>The data to add in the view</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -345,7 +347,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getData">#</a>
-			<code><a href="source-class-Hawk.View.html#100-106" title="Go to source code">getData</a>( )</code>
+			<code><a href="source-class-Hawk.View.html#141-148" title="Go to source code">getData</a>( )</code>
 
 			<div class="description short">
 				<p>Get the data pushed in the view</p>
@@ -358,7 +360,7 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						array
+						array<br>The view data
 					</div>
 
 
@@ -378,7 +380,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_display">#</a>
-			<code><a href="source-class-Hawk.View.html#186-198" title="Go to source code">display</a>( )</code>
+			<code><a href="source-class-Hawk.View.html#244-257" title="Go to source code">display</a>( )</code>
 
 			<div class="description short">
 				<p>Replace the keys in the template and display it</p>
@@ -411,7 +413,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_make">#</a>
-			<code><a href="source-class-Hawk.View.html#201-211" title="Go to source code">make</a>( <span>string <var>$file</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.View.html#260-272" title="Go to source code">make</a>( <span>string <var>$file</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Generate a view result</p>
@@ -451,7 +453,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_makeFromString">#</a>
-			<code><a href="source-class-Hawk.View.html#214-234" title="Go to source code">makeFromString</a>( <span>string <var>$content</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.View.html#275-297" title="Go to source code">makeFromString</a>( <span>string <var>$content</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Generate a view from a string</p>
@@ -498,15 +500,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.View.html#39" title="Go to source code"><b>PLUGINS_VIEW</b></a>
+						<a href="source-class-Hawk.View.html#48-51" title="Go to source code"><b>PLUGINS_VIEW</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>The directory containing the views plugins</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>The directory containing the views plugins</p>
 
 					</div>
 				</td>
@@ -522,15 +524,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.View.html#41" title="Go to source code"><b>BLOCK_START_REGEX</b></a>
+						<a href="source-class-Hawk.View.html#53-56" title="Go to source code"><b>BLOCK_START_REGEX</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>The regular expression to match control structure openings</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>The regular expression to match control structure openings</p>
 
 					</div>
 				</td>
@@ -546,15 +548,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.View.html#42" title="Go to source code"><b>BLOCK_END_REGEX</b></a>
+						<a href="source-class-Hawk.View.html#58-61" title="Go to source code"><b>BLOCK_END_REGEX</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>The regular expression to match control structure closings</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>The regular expression to match control structure closings</p>
 
 					</div>
 				</td>
@@ -570,15 +572,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.View.html#43" title="Go to source code"><b>ECHO_REGEX</b></a>
+						<a href="source-class-Hawk.View.html#63-66" title="Go to source code"><b>ECHO_REGEX</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>The regular expression to echo a variable</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>The regular expression to echo a variable</p>
 
 					</div>
 				</td>
@@ -594,15 +596,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.View.html#45" title="Go to source code"><b>ASSIGN_REGEX</b></a>
+						<a href="source-class-Hawk.View.html#68-71" title="Go to source code"><b>ASSIGN_REGEX</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>The regular expression for assignations</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>The regular expression for assignations</p>
 
 					</div>
 				</td>
@@ -618,15 +620,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.View.html#47" title="Go to source code"><b>PLUGIN_REGEX</b></a>
+						<a href="source-class-Hawk.View.html#73-76" title="Go to source code"><b>PLUGIN_REGEX</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>The regular expression to match views plugins</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>The regular expression to match views plugins</p>
 
 					</div>
 				</td>
@@ -642,15 +644,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.View.html#48" title="Go to source code"><b>PLUGIN_ARGUMENTS_REGEX</b></a>
+						<a href="source-class-Hawk.View.html#78-81" title="Go to source code"><b>PLUGIN_ARGUMENTS_REGEX</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>The regular expression to match view plugins attributes</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>The regular expression to match view plugins attributes</p>
 
 					</div>
 				</td>
@@ -666,15 +668,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.View.html#50" title="Go to source code"><b>TRANSLATION_REGEX</b></a>
+						<a href="source-class-Hawk.View.html#83-86" title="Go to source code"><b>TRANSLATION_REGEX</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>The regular expresison to match translations</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>The regular expresison to match translations</p>
 
 					</div>
 				</td>
@@ -698,7 +700,7 @@
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -220,7 +221,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> BaseModels<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.MenuItem.html#8-194" title="Go to source code">models/MenuItem.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.MenuItem.html#11-226" title="Go to source code">models/MenuItem.php</a>
 		<br>
 	</div>
 
@@ -240,7 +241,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.MenuItem.html#43-66" title="Go to source code">__construct</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.MenuItem.html#56-80" title="Go to source code">__construct</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -276,7 +277,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAvailableItems">#</a>
-			<code><a href="source-class-Hawk.MenuItem.html#69-112" title="Go to source code">getAvailableItems</a>( <span><code><a href="class-Hawk.User.html">Hawk\User</a></code> <var>$user</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.MenuItem.html#83-132" title="Go to source code">getAvailableItems</a>( <span><code><a href="class-Hawk.User.html">Hawk\User</a></code> <var>$user</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Get the items available for a specific user</p>
@@ -314,7 +315,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-Hawk.MenuItem.html#115-140" title="Go to source code">add</a>( <span>array <var>$data</var></span> )</code>
+			<code><a href="source-class-Hawk.MenuItem.html#135-164" title="Go to source code">add</a>( <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a new item in the database</p>
@@ -354,7 +355,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getByName">#</a>
-			<code><a href="source-class-Hawk.MenuItem.html#142-161" title="Go to source code">getByName</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Hawk.MenuItem.html#166-189" title="Go to source code">getByName</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Find a menu item by it name, formatted as "<plugin>.<name>"</p>
@@ -392,7 +393,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPluginMenuItems">#</a>
-			<code><a href="source-class-Hawk.MenuItem.html#164-175" title="Go to source code">getPluginMenuItems</a>( <span>string <var>$plugin</var></span> )</code>
+			<code><a href="source-class-Hawk.MenuItem.html#192-207" title="Go to source code">getPluginMenuItems</a>( <span>string <var>$plugin</var></span> )</code>
 
 			<div class="description short">
 				<p>Get all the menu items of a plugin</p>
@@ -430,7 +431,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_delete">#</a>
-			<code><a href="source-class-Hawk.MenuItem.html#178-193" title="Go to source code">delete</a>( )</code>
+			<code><a href="source-class-Hawk.MenuItem.html#210-225" title="Go to source code">delete</a>( )</code>
 
 			<div class="description short">
 				<p>Delete the menu item</p>
@@ -507,7 +508,7 @@
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.MenuItem.html#23-26" title="Go to source code"><b>USER_ITEM_ID</b></a>
+						<a href="source-class-Hawk.MenuItem.html#31-34" title="Go to source code"><b>USER_ITEM_ID</b></a>
 					</code>
 
 					<div class="description short">
@@ -531,7 +532,7 @@
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.MenuItem.html#28-31" title="Go to source code"><b>ADMIN_ITEM_ID</b></a>
+						<a href="source-class-Hawk.MenuItem.html#36-39" title="Go to source code"><b>ADMIN_ITEM_ID</b></a>
 					</code>
 
 					<div class="description short">
@@ -562,11 +563,11 @@
 		<tr data-order="tablename" id="$tablename">
 			<td class="attributes"><code>
 				public static 
-				string
+				sting
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.MenuItem.html#13-16" title="Go to source code"><var>$tablename</var></a>
+					<a href="source-class-Hawk.MenuItem.html#17-22" title="Go to source code"><var>$tablename</var></a>
 
 				<div class="description short">
 					<p>The associated table</p>
@@ -591,7 +592,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.MenuItem.html#18-21" title="Go to source code"><var>$primaryColumn</var></a>
+					<a href="source-class-Hawk.MenuItem.html#24-29" title="Go to source code"><var>$primaryColumn</var></a>
 
 				<div class="description short">
 					<p>The primary column</p>
@@ -616,7 +617,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.MenuItem.html#38-41" title="Go to source code"><var>$label</var></a>
+					<a href="source-class-Hawk.MenuItem.html#48-53" title="Go to source code"><var>$label</var></a>
 
 				<div class="description short">
 					<p>The menu item label</p>
@@ -655,7 +656,7 @@
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

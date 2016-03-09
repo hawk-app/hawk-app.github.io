@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li class="active"><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -207,12 +208,12 @@
 
 
 	<div class="alert alert-info">
-		
+		<b>Abstract</b><br>
 		
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Utils<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Image.html#8-168" title="Go to source code">Image.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Image.html#11-185" title="Go to source code">Image.php</a>
 		<br>
 	</div>
 
@@ -232,7 +233,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInstance">#</a>
-			<code><a href="source-class-Hawk.Image.html#48-67" title="Go to source code">getInstance</a>( <span>string <var>$filename</var></span> )</code>
+			<code><a href="source-class-Hawk.Image.html#52-73" title="Go to source code">getInstance</a>( <span>string <var>$filename</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a new Image instance</p>
@@ -270,7 +271,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.Image.html#70-80" title="Go to source code">__construct</a>( <span>string <var>$filename</var></span>, <span>array <var>$data</var></span> )</code>
+			<code><a href="source-class-Hawk.Image.html#76-87" title="Go to source code">__construct</a>( <span>string <var>$filename</var></span>, <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -306,7 +307,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFilename">#</a>
-			<code><a href="source-class-Hawk.Image.html#82-88" title="Go to source code">getFilename</a>( )</code>
+			<code><a href="source-class-Hawk.Image.html#89-96" title="Go to source code">getFilename</a>( )</code>
 
 			<div class="description short">
 				<p>Return the filename of the image</p>
@@ -339,7 +340,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getWidth">#</a>
-			<code><a href="source-class-Hawk.Image.html#90-96" title="Go to source code">getWidth</a>( )</code>
+			<code><a href="source-class-Hawk.Image.html#98-105" title="Go to source code">getWidth</a>( )</code>
 
 			<div class="description short">
 				<p>Return the width of the image</p>
@@ -372,7 +373,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHeight">#</a>
-			<code><a href="source-class-Hawk.Image.html#99-105" title="Go to source code">getHeight</a>( )</code>
+			<code><a href="source-class-Hawk.Image.html#108-115" title="Go to source code">getHeight</a>( )</code>
 
 			<div class="description short">
 				<p>Return the height of the image</p>
@@ -405,7 +406,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getType">#</a>
-			<code><a href="source-class-Hawk.Image.html#108-114" title="Go to source code">getType</a>( )</code>
+			<code><a href="source-class-Hawk.Image.html#118-125" title="Go to source code">getType</a>( )</code>
 
 			<div class="description short">
 				<p>Return the type of the image</p>
@@ -438,7 +439,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMimeType">#</a>
-			<code><a href="source-class-Hawk.Image.html#117-123" title="Go to source code">getMimeType</a>( )</code>
+			<code><a href="source-class-Hawk.Image.html#128-135" title="Go to source code">getMimeType</a>( )</code>
 
 			<div class="description short">
 				<p>Return the mime type of the image</p>
@@ -471,7 +472,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFileSize">#</a>
-			<code><a href="source-class-Hawk.Image.html#126-132" title="Go to source code">getFileSize</a>( )</code>
+			<code><a href="source-class-Hawk.Image.html#138-145" title="Go to source code">getFileSize</a>( )</code>
 
 			<div class="description short">
 				<p>Return the file size of the image</p>
@@ -504,7 +505,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getExtension">#</a>
-			<code><a href="source-class-Hawk.Image.html#135-141" title="Go to source code">getExtension</a>( )</code>
+			<code><a href="source-class-Hawk.Image.html#148-155" title="Go to source code">getExtension</a>( )</code>
 
 			<div class="description short">
 				<p>Return the file extension of the image, depending on the type of the image, not the image file</p>
@@ -537,7 +538,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_resize">#</a>
-			<code><a href="source-class-Hawk.Image.html#144-158" title="Go to source code">resize</a>( <span>integer <var>$width</var></span>, <span>integer <var>$height</var></span>, <span>string <var>$filename</var></span> )</code>
+			<code><a href="source-class-Hawk.Image.html#158-174" title="Go to source code">resize</a>( <span>integer <var>$width</var></span>, <span>integer <var>$height</var></span>, <span>string <var>$filename</var></span> )</code>
 
 			<div class="description short">
 				<p>Resize the image</p>
@@ -579,7 +580,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_compress">#</a>
-			<code><a href="source-class-Hawk.Image.html#160-166" title="Go to source code">compress</a>( <span>float <var>$rate</var></span>, <span>string <var>$filename</var></span> )</code>
+			<code><a href="source-class-Hawk.Image.html#176-184" title="Go to source code">compress</a>( <span>float <var>$rate</var></span>, <span>string <var>$filename</var></span> )</code>
 
 			<div class="description short">
 				<p>Compress the image</p>
@@ -631,7 +632,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Image.html#13-16" title="Go to source code"><var>$width</var></a>
+					<a href="source-class-Hawk.Image.html#17-20" title="Go to source code"><var>$width</var></a>
 
 				<div class="description short">
 					<p>The width of the image</p>
@@ -656,7 +657,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Image.html#18-21" title="Go to source code"><var>$height</var></a>
+					<a href="source-class-Hawk.Image.html#22-25" title="Go to source code"><var>$height</var></a>
 
 				<div class="description short">
 					<p>The height of the image</p>
@@ -681,7 +682,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Image.html#23-26" title="Go to source code"><var>$type</var></a>
+					<a href="source-class-Hawk.Image.html#27-30" title="Go to source code"><var>$type</var></a>
 
 				<div class="description short">
 					<p>The type of the image : IMAGETYPE_GIF, IMAGETYPE_PNG, IMAGETYPE_JPEG</p>
@@ -706,7 +707,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Image.html#28-31" title="Go to source code"><var>$mime</var></a>
+					<a href="source-class-Hawk.Image.html#32-35" title="Go to source code"><var>$mime</var></a>
 
 				<div class="description short">
 					<p>The mime type of the image</p>
@@ -731,7 +732,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Image.html#33-36" title="Go to source code"><var>$filename</var></a>
+					<a href="source-class-Hawk.Image.html#37-40" title="Go to source code"><var>$filename</var></a>
 
 				<div class="description short">
 					<p>The filename of the image</p>
@@ -764,7 +765,7 @@
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

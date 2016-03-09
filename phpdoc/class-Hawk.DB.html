@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -213,7 +214,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.DB.html#9-596" title="Go to source code">DB.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.DB.html#11-642" title="Go to source code">DB.php</a>
 		<br>
 	</div>
 
@@ -233,7 +234,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.DB.html#78-106" title="Go to source code">__construct</a>( <span>array <var>$data</var></span> )</code>
+			<code><a href="source-class-Hawk.DB.html#81-110" title="Go to source code">__construct</a>( <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -269,7 +270,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-Hawk.DB.html#109-117" title="Go to source code">add</a>( <span>string <var>$name</var></span>, <span>array <var>$params</var></span> )</code>
+			<code><a href="source-class-Hawk.DB.html#113-129" title="Go to source code">add</a>( <span>string <var>$name</var></span>, <span>array <var>$params</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a configuration for a database connection</p>
@@ -284,8 +285,15 @@
 						<dt><var>$name</var></dt>
 						<dd>The instance name</dd>
 						<dt><var>$params</var></dt>
-						<dd><p>The connection parameters. Each element of this array is an array itself, containing the connections data : 'host', 'dbname', 'username', 'password'. \
-                        When openning the connection, if the first connection fails, a connection will be tried on the second element, and then. This is usefull for master / slave connections</p></dd>
+						<dd><p>The connection parameters.
+                      Each element of this array is an array itself, containing the connections data :
+                          - host : The database hostname / ip and port,
+                          - username : The user name
+                          - password : The user password
+                          - dbname : The database name,
+                      When openning the connection, if the first connection fails,
+                      a connection will be tried on the second element, and then.
+                      This is usefull for master / slave connections</p></dd>
 					</dl></div>
 
 
@@ -299,14 +307,14 @@
 
 			<td class="attributes"><code>
 				 public static
-				
+				<code><a href="class-Hawk.DB.html">Hawk\DB</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Hawk.DB.html#119-150" title="Go to source code">get</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Hawk.DB.html#131-165" title="Go to source code">get</a>( <span>String <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the open connection, or open it if not already open.
@@ -321,9 +329,13 @@ This method manages master / slaves connections</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
-						<dd>the name of the instance</dd>
+						<dd>The name of the instance</dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Hawk.DB.html">Hawk\DB</a></code><br>the connected instance
+					</div>
 
 
 
@@ -342,7 +354,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_query">#</a>
-			<code><a href="source-class-Hawk.DB.html#152-300" title="Go to source code">query</a>( <span> <var>$sql</var></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.DB.html#167-317" title="Go to source code">query</a>( <span>string <var>$sql</var></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Execute a SQL query on the SQL server, and get the result of execution</p>
@@ -355,23 +367,23 @@ This method manages master / slaves connections</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$sql</var></dt>
-						<dd>query to execute,</dd>
+						<dd>The query to execute,</dd>
 						<dt><var>$binds</var></dt>
 						<dd>The binded value to send to the server</dd>
 						<dt><var>$options</var></dt>
 						<dd><p>The result options. This array can contains the following data :
-                    - 'return' (mixed) : The type of return (default DB::RETURN_STATUS). It can take the following values :
-                        . DB::RETURN_STATUS : Returns the execution status
-                        . DB::RETURN_ARRAY : Each result row is an associative array, with columns as keys
-                        . DB::RETURN_OBJECT : Eeach result row is a StdClass instance, with columns as properties
-                        . DB::RETURN_LAST_INSERT_ID : Return the last inserted id
-                        . DB::RETURN_AFFECTED_ROWS : Returns the number of affected rows
-                        . DB::RETURN_QUERY : Returns the query itself
-                        . DB::RETURN_CURSOR : Returns a cursor to fetch the results
-                        . A classname : Each result row is an instance of the given classname, with columns as properties
-                    - 'onerow' (bool) : If true, the function will return the first row of the result set (default false)
+                       - 'return' (mixed) : The type of return (default DB::RETURN_STATUS). It can be set to :
+                           . DB::RETURN_STATUS : Returns the execution status
+                           . DB::RETURN_ARRAY : Each result row is an associative array, with columns as keys
+                           . DB::RETURN_OBJECT : Eeach result row is a StdClass instance, with columns as properties
+                           . DB::RETURN_LAST_INSERT_ID : Return the last inserted id
+                           . DB::RETURN_AFFECTED_ROWS : Returns the number of affected rows
+                           . DB::RETURN_QUERY : Returns the query itself
+                           . DB::RETURN_CURSOR : Returns a cursor to fetch the results
+                           . A classname : Each result row is an instance of the given classname, with columns as properties
+                       - 'onerow' (bool) : If true, the function will return the first row of the result set (default false)
                         - 'index' (string) : Defines the column values to get as array result index (default null)
-                    - 'args' (array) : This can be used when you define a classname as 'return', to pass arguments to the class constructor</p></dd>
+                       - 'args' (array) : This can be used when you define a classname as 'return', to pass arguments to the class constructor</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -396,7 +408,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_selectDb">#</a>
-			<code><a href="source-class-Hawk.DB.html#303-310" title="Go to source code">selectDb</a>( <span>string <var>$dbname</var></span> )</code>
+			<code><a href="source-class-Hawk.DB.html#320-329" title="Go to source code">selectDb</a>( <span>string <var>$dbname</var></span> )</code>
 
 			<div class="description short">
 				<p>Select a database</p>
@@ -434,7 +446,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_select">#</a>
-			<code><a href="source-class-Hawk.DB.html#312-396" title="Go to source code">select</a>( <span>array <var>$query</var></span> )</code>
+			<code><a href="source-class-Hawk.DB.html#331-421" title="Go to source code">select</a>( <span>array <var>$query</var></span> )</code>
 
 			<div class="description short">
 				<p>Build and execute a SELECT query on the selected database, and return the result</p>
@@ -448,18 +460,20 @@ This method manages master / slaves connections</p>
 					<div class="list"><dl>
 						<dt><var>$query</var></dt>
 						<dd><p>The parameters of the query. This parameter can have the following data :
-                    - 'from' string (required) : The table name where to search
-                    - 'fields' array (optionnal) : The fields to get. Each element of this array can be a single element of the column name, or a key/value combination that will be parse to 'key as value' in the SQL query
-                    - 'where' string | DBExample (optionnal) : The search condition. Can be a SQL expression or a DBExample instance
-                    - 'group' array (optionnal) : The columns to group the result, each column in an array element
-                    - 'having' string (optinnal) : The 'HAVING' expression, formatted as a SQL expression
-                    - 'orderby' array (optionnal) : The result sort, where each key is a column name, and the values define the order (ASC, DESC)
-                    - 'start' int (optionnal) : The first row number to get the results
-                    - 'limit' int (optionnal) : The maximum number of rows to return
-                    - 'one' bool (optionnal) : If set to true, then the first row will be returned
-                    - 'binds' array (optionnal) : The binded values
-                    - 'index' string (optionnal) : If set, the result arrar will be indexed by the value of the column set by this property
-                    - 'return' mixed (default : DB::RETURN_ARRAY) : The return type (all possible values are defined on the method 'query')</p></dd>
+                       - 'from' string (required) : The table name where to search
+                       - 'fields' array (optionnal) : The fields to get. Each element of this array can be :
+                           - A single element of the column name
+                           - A key/value combination that will be parse to 'key as value' in the SQL query
+                       - 'where' string | DBExample (optionnal) : The search condition. Can be a SQL expression or a DBExample instance
+                       - 'group' array (optionnal) : The columns to group the result, each column in an array element
+                       - 'having' string (optinnal) : The 'HAVING' expression, formatted as a SQL expression
+                       - 'orderby' array (optionnal) : The result sort, where each key is a column name, and the values define the order (ASC, DESC)
+                       - 'start' int (optionnal) : The first row number to get the results
+                       - 'limit' int (optionnal) : The maximum number of rows to return
+                       - 'one' bool (optionnal) : If set to true, then the first row will be returned
+                       - 'binds' array (optionnal) : The binded values
+                       - 'index' string (optionnal) : If set, the result arrar will be indexed by the value of the column set by this property
+                       - 'return' mixed (default : DB::RETURN_ARRAY) : The return type (all possible values are defined on the method 'query')</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -484,7 +498,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_insert">#</a>
-			<code><a href="source-class-Hawk.DB.html#399-425" title="Go to source code">insert</a>( <span>string <var>$table</var></span>, <span>array <var>$insert</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$flag</var> = <span class="php-quote">''</span></span>, <span>string <var>$onduplicatekey</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.DB.html#424-452" title="Go to source code">insert</a>( <span>string <var>$table</var></span>, <span>array <var>$insert</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$flag</var> = <span class="php-quote">''</span></span>, <span>string <var>$onduplicatekey</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Insert a row in a table</p>
@@ -528,7 +542,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_replace">#</a>
-			<code><a href="source-class-Hawk.DB.html#427-450" title="Go to source code">replace</a>( <span>string <var>$table</var></span>, <span>array <var>$insert</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.DB.html#454-479" title="Go to source code">replace</a>( <span>string <var>$table</var></span>, <span>array <var>$insert</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Replace data in a table</p>
@@ -568,7 +582,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_update">#</a>
-			<code><a href="source-class-Hawk.DB.html#452-478" title="Go to source code">update</a>( <span>string <var>$table</var></span>, <span>string|<code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$update</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.DB.html#481-509" title="Go to source code">update</a>( <span>string <var>$table</var></span>, <span>string|<code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$update</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Update records in a table</p>
@@ -612,7 +626,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_delete">#</a>
-			<code><a href="source-class-Hawk.DB.html#480-498" title="Go to source code">delete</a>( <span>string <var>$table</var></span>, <span>string|<code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.DB.html#511-531" title="Go to source code">delete</a>( <span>string <var>$table</var></span>, <span>string|<code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Delete records in a table</p>
@@ -647,14 +661,14 @@ This method manages master / slaves connections</p>
 
 			<td class="attributes"><code>
 				 public 
-				
+				integer
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_count">#</a>
-			<code><a href="source-class-Hawk.DB.html#500-530" title="Go to source code">count</a>( <span>string <var>$table</var></span>, <span>string|<code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$condition</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$field</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$group</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.DB.html#533-566" title="Go to source code">count</a>( <span>string <var>$table</var></span>, <span>string|<code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$field</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$group</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Count elements in a table</p>
@@ -668,8 +682,8 @@ This method manages master / slaves connections</p>
 					<div class="list"><dl>
 						<dt><var>$table</var></dt>
 						<dd>The table to count elements</dd>
-						<dt><var>$condition</var></dt>
-						<dd>$where The condition to find rows to count</dd>
+						<dt><var>$where</var></dt>
+						<dd>The condition to find rows to count</dd>
 						<dt><var>$binds</var></dt>
 						<dd>The binded values, in case of $where is a SQL expression</dd>
 						<dt><var>$field</var></dt>
@@ -678,6 +692,10 @@ This method manages master / slaves connections</p>
 						<dd>Groups rows before counting them</dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The number of found elements
+					</div>
 
 
 
@@ -696,7 +714,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_formatField">#</a>
-			<code><a href="source-class-Hawk.DB.html#533-542" title="Go to source code">formatField</a>( <span>string <var>$str</var></span> )</code>
+			<code><a href="source-class-Hawk.DB.html#569-582" title="Go to source code">formatField</a>( <span>string <var>$str</var></span> )</code>
 
 			<div class="description short">
 				<p>Format a string to a SQL field format : [<code>table</code>.]<code>field</code></p>
@@ -734,7 +752,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getLogs">#</a>
-			<code><a href="source-class-Hawk.DB.html#562-568" title="Go to source code">getLogs</a>( )</code>
+			<code><a href="source-class-Hawk.DB.html#603-610" title="Go to source code">getLogs</a>( )</code>
 
 			<div class="description short">
 				<p>Get the DB logs</p>
@@ -767,7 +785,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_quote">#</a>
-			<code><a href="source-class-Hawk.DB.html#571-579" title="Go to source code">quote</a>( <span>string <var>$str</var></span>, <span>integer <var>$type</var> = \PDO::PARAM_STR</span> )</code>
+			<code><a href="source-class-Hawk.DB.html#613-623" title="Go to source code">quote</a>( <span>string <var>$str</var></span>, <span>integer <var>$type</var> = \PDO::PARAM_STR</span> )</code>
 
 			<div class="description short">
 				<p>Quote a string</p>
@@ -807,7 +825,7 @@ This method manages master / slaves connections</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFullTablename">#</a>
-			<code><a href="source-class-Hawk.DB.html#582-594" title="Go to source code">getFullTablename</a>( <span>string <var>$table</var></span>, <span>string <var>$prefix</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.DB.html#626-640" title="Go to source code">getFullTablename</a>( <span>string <var>$table</var></span>, <span>string <var>$prefix</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Get the real name of a table, with the configured prefix</p>
@@ -862,7 +880,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#64" title="Go to source code"><b>RETURN_STATUS</b></a>
+						<a href="source-class-Hawk.DB.html#67" title="Go to source code"><b>RETURN_STATUS</b></a>
 					</code>
 
 					<div class="description short">
@@ -886,7 +904,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#65" title="Go to source code"><b>RETURN_ARRAY</b></a>
+						<a href="source-class-Hawk.DB.html#68" title="Go to source code"><b>RETURN_ARRAY</b></a>
 					</code>
 
 					<div class="description short">
@@ -910,7 +928,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#66" title="Go to source code"><b>RETURN_OBJECT</b></a>
+						<a href="source-class-Hawk.DB.html#69" title="Go to source code"><b>RETURN_OBJECT</b></a>
 					</code>
 
 					<div class="description short">
@@ -934,7 +952,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#67" title="Go to source code"><b>RETURN_LAST_INSERT_ID</b></a>
+						<a href="source-class-Hawk.DB.html#70" title="Go to source code"><b>RETURN_LAST_INSERT_ID</b></a>
 					</code>
 
 					<div class="description short">
@@ -958,7 +976,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#68" title="Go to source code"><b>RETURN_AFFECTED_ROWS</b></a>
+						<a href="source-class-Hawk.DB.html#71" title="Go to source code"><b>RETURN_AFFECTED_ROWS</b></a>
 					</code>
 
 					<div class="description short">
@@ -982,7 +1000,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#69" title="Go to source code"><b>RETURN_QUERY</b></a>
+						<a href="source-class-Hawk.DB.html#72" title="Go to source code"><b>RETURN_QUERY</b></a>
 					</code>
 
 					<div class="description short">
@@ -1006,7 +1024,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#70" title="Go to source code"><b>RETURN_CURSOR</b></a>
+						<a href="source-class-Hawk.DB.html#73" title="Go to source code"><b>RETURN_CURSOR</b></a>
 					</code>
 
 					<div class="description short">
@@ -1030,7 +1048,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#73" title="Go to source code"><b>SORT_ASC</b></a>
+						<a href="source-class-Hawk.DB.html#76" title="Go to source code"><b>SORT_ASC</b></a>
 					</code>
 
 					<div class="description short">
@@ -1054,7 +1072,7 @@ This method manages master / slaves connections</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.DB.html#74" title="Go to source code"><b>SORT_DESC</b></a>
+						<a href="source-class-Hawk.DB.html#77" title="Go to source code"><b>SORT_DESC</b></a>
 					</code>
 
 					<div class="description short">
@@ -1089,7 +1107,7 @@ This method manages master / slaves connections</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.DB.html#21-24" title="Go to source code"><var>$instances</var></a>
+					<a href="source-class-Hawk.DB.html#24-27" title="Go to source code"><var>$instances</var></a>
 
 				<div class="description short">
 					<p>List of connections instances</p>
@@ -1122,7 +1140,7 @@ This method manages master / slaves connections</p>
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

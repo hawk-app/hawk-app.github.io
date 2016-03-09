@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -220,7 +221,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> BaseModels<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.User.html#11-298" title="Go to source code">models/User.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.User.html#12-347" title="Go to source code">models/User.php</a>
 		<br>
 	</div>
 
@@ -240,7 +241,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.User.html#51-60" title="Go to source code">__construct</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.User.html#57-67" title="Go to source code">__construct</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -276,7 +277,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAll">#</a>
-			<code><a href="source-class-Hawk.User.html#62-76" title="Go to source code">getAll</a>( <span>string <var>$index</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$order</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.User.html#69-85" title="Go to source code">getAll</a>( <span>string <var>$index</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$order</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Get all users except guest user</p>
@@ -320,7 +321,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getByUsername">#</a>
-			<code><a href="source-class-Hawk.User.html#79-86" title="Go to source code">getByUsername</a>( <span>string <var>$username</var></span> )</code>
+			<code><a href="source-class-Hawk.User.html#88-97" title="Go to source code">getByUsername</a>( <span>string <var>$username</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a user by it username</p>
@@ -358,7 +359,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getByEmail">#</a>
-			<code><a href="source-class-Hawk.User.html#89-96" title="Go to source code">getByEmail</a>( <span>string <var>$email</var></span> )</code>
+			<code><a href="source-class-Hawk.User.html#100-109" title="Go to source code">getByEmail</a>( <span>string <var>$email</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a user by it email address</p>
@@ -396,7 +397,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getProfileData">#</a>
-			<code><a href="source-class-Hawk.User.html#122-137" title="Go to source code">getProfileData</a>( <span>string <var>$prop</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.User.html#135-169" title="Go to source code">getProfileData</a>( <span>string <var>$prop</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>Get the user's profile data</p>
@@ -409,7 +410,8 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$prop</var></dt>
-						<dd>The property name to get. If not set, the function will return an array containing all the profile data</dd>
+						<dd><p>The property name to get.
+                    If not set, the function will return an array containing all the profile data</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -434,7 +436,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setProfileData">#</a>
-			<code><a href="source-class-Hawk.User.html#140-148" title="Go to source code">setProfileData</a>( <span>string <var>$prop</var></span>, <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Hawk.User.html#172-180" title="Go to source code">setProfileData</a>( <span>string <var>$prop</var></span>, <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the user's profile data. This method does not register the data in database, only set in the user properties</p>
@@ -454,10 +456,6 @@
 
 
 
-					<h4>See</h4>
-					<div class="list">
-							<code><a href="class-Hawk.User.html#_saveProfile">Hawk\User::saveProfile()</a></code><br>
-					</div>
 
 
 			</div>
@@ -474,7 +472,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_saveProfile">#</a>
-			<code><a href="source-class-Hawk.User.html#151-163" title="Go to source code">saveProfile</a>( )</code>
+			<code><a href="source-class-Hawk.User.html#183-197" title="Go to source code">saveProfile</a>( )</code>
 
 			<div class="description short">
 				<p>Save the user's profile in the database</p>
@@ -503,7 +501,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getOptions">#</a>
-			<code><a href="source-class-Hawk.User.html#166-193" title="Go to source code">getOptions</a>( <span>string <var>$name</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.User.html#200-231" title="Go to source code">getOptions</a>( <span>string <var>$name</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Get the user options. This function returns the option value for $name. If $name is not set,
@@ -543,7 +541,7 @@ it returns the array containing all the user options</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setOption">#</a>
-			<code><a href="source-class-Hawk.User.html#196-220" title="Go to source code">setOption</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Hawk.User.html#234-259" title="Go to source code">setOption</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Register an option for the user.
@@ -581,7 +579,7 @@ This function registers the option value in the database and in the current user
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAllowed">#</a>
-			<code><a href="source-class-Hawk.User.html#224-254" title="Go to source code">isAllowed</a>( <span>string|integer <var>$action</var></span> )</code>
+			<code><a href="source-class-Hawk.User.html#263-295" title="Go to source code">isAllowed</a>( <span>string|integer <var>$action</var></span> )</code>
 
 			<div class="description short">
 				<p>Check if the user is allowed to perform an action</p>
@@ -595,8 +593,8 @@ This function registers the option value in the database and in the current user
 					<div class="list"><dl>
 						<dt><var>$action</var></dt>
 						<dd><p>This parameter can represent :
-                            - A specific action, formatted as "<plugin>.<key>"
-                            - A permission id, when an integer is given</p></dd>
+                               - A specific action, formatted as "<plugin>.<key>"
+                               - A permission id, when an integer is given</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -621,7 +619,7 @@ This function registers the option value in the database and in the current user
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUsername">#</a>
-			<code><a href="source-class-Hawk.User.html#257-263" title="Go to source code">getUsername</a>( )</code>
+			<code><a href="source-class-Hawk.User.html#298-305" title="Go to source code">getUsername</a>( )</code>
 
 			<div class="description short">
 				<p>Get the user's username</p>
@@ -654,7 +652,7 @@ This function registers the option value in the database and in the current user
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDisplayName">#</a>
-			<code><a href="source-class-Hawk.User.html#266-272" title="Go to source code">getDisplayName</a>( )</code>
+			<code><a href="source-class-Hawk.User.html#308-315" title="Go to source code">getDisplayName</a>( )</code>
 
 			<div class="description short">
 				<p>Get the user's full name. This method returns the real name if it set in the user's profile, else, it returns his username</p>
@@ -687,7 +685,7 @@ This function registers the option value in the database and in the current user
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isLogged">#</a>
-			<code><a href="source-class-Hawk.User.html#274-280" title="Go to source code">isLogged</a>( )</code>
+			<code><a href="source-class-Hawk.User.html#317-324" title="Go to source code">isLogged</a>( )</code>
 
 			<div class="description short">
 				<p>Check if the user is logged or not</p>
@@ -720,7 +718,7 @@ This function registers the option value in the database and in the current user
 
 			<td class="name"><div>
 			<a class="anchor" href="#_canAccessApplication">#</a>
-			<code><a href="source-class-Hawk.User.html#283-289" title="Go to source code">canAccessApplication</a>( )</code>
+			<code><a href="source-class-Hawk.User.html#327-334" title="Go to source code">canAccessApplication</a>( )</code>
 
 			<div class="description short">
 				<p>Check if the user can access the application</p>
@@ -753,14 +751,16 @@ This function registers the option value in the database and in the current user
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isRemovable">#</a>
-			<code><a href="source-class-Hawk.User.html#291-297" title="Go to source code">isRemovable</a>( )</code>
+			<code><a href="source-class-Hawk.User.html#336-346" title="Go to source code">isRemovable</a>( )</code>
 
 			<div class="description short">
-				<p>Check of the user is removable. A user is removable if he's not the one executing the current script, and if he's not a guest or the main application administrator</p>
+				<p>Check of the user is removable. A user is removable if he's not the one executing the current script,
+and if he's not a guest or the main application administrator</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Check of the user is removable. A user is removable if he's not the one executing the current script, and if he's not a guest or the main application administrator</p>
+				<p>Check of the user is removable. A user is removable if he's not the one executing the current script,
+and if he's not a guest or the main application administrator</p>
 
 
 
@@ -829,7 +829,7 @@ This function registers the option value in the database and in the current user
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.User.html#41-44" title="Go to source code"><b>GUEST_USER_ID</b></a>
+						<a href="source-class-Hawk.User.html#47-50" title="Go to source code"><b>GUEST_USER_ID</b></a>
 					</code>
 
 					<div class="description short">
@@ -853,7 +853,7 @@ This function registers the option value in the database and in the current user
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.User.html#46-49" title="Go to source code"><b>ROOT_USER_ID</b></a>
+						<a href="source-class-Hawk.User.html#52-55" title="Go to source code"><b>ROOT_USER_ID</b></a>
 					</code>
 
 					<div class="description short">
@@ -888,7 +888,7 @@ This function registers the option value in the database and in the current user
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.User.html#16-20" title="Go to source code"><var>$tablename</var></a>
+					<a href="source-class-Hawk.User.html#18-23" title="Go to source code"><var>$tablename</var></a>
 
 				<div class="description short">
 					<p>The associated table</p>
@@ -928,7 +928,7 @@ This function registers the option value in the database and in the current user
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

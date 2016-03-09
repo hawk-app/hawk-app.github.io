@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -204,7 +205,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Event.html#9-145" title="Go to source code">Event.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Event.html#11-158" title="Go to source code">Event.php</a>
 		<br>
 	</div>
 
@@ -224,7 +225,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.Event.html#42-50" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Event.html#49-58" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Constructor. Create a new event</p>
@@ -260,7 +261,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getName">#</a>
-			<code><a href="source-class-Hawk.Event.html#53-59" title="Go to source code">getName</a>( )</code>
+			<code><a href="source-class-Hawk.Event.html#61-68" title="Go to source code">getName</a>( )</code>
 
 			<div class="description short">
 				<p>Get the event name</p>
@@ -293,7 +294,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getData">#</a>
-			<code><a href="source-class-Hawk.Event.html#62-69" title="Go to source code">getData</a>( <span>string <var>$prop</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.Event.html#71-80" title="Go to source code">getData</a>( <span>string <var>$prop</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Get event data. This method is used to get all the data of the event, or a specific data property</p>
@@ -331,7 +332,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setData">#</a>
-			<code><a href="source-class-Hawk.Event.html#72-79" title="Go to source code">setData</a>( <span>string <var>$prop</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Hawk.Event.html#83-91" title="Go to source code">setData</a>( <span>string <var>$prop</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Set data to the event</p>
@@ -367,7 +368,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_on">#</a>
-			<code><a href="source-class-Hawk.Event.html#82-114" title="Go to source code">on</a>( <span>string <var>$name</var></span>, <span>callable <var>$action</var></span>, <span>integer <var>$order</var> = self::ORDER_LAST </span> )</code>
+			<code><a href="source-class-Hawk.Event.html#94-127" title="Go to source code">on</a>( <span>string <var>$name</var></span>, <span>callable <var>$action</var></span>, <span>integer <var>$order</var> = self::ORDER_LAST </span> )</code>
 
 			<div class="description short">
 				<p>Add a listener on a event type</p>
@@ -405,7 +406,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unbind">#</a>
-			<code><a href="source-class-Hawk.Event.html#117-125" title="Go to source code">unbind</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Hawk.Event.html#130-139" title="Go to source code">unbind</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove all listeners on a event type</p>
@@ -439,21 +440,16 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_trigger">#</a>
-			<code><a href="source-class-Hawk.Event.html#128-144" title="Go to source code">trigger</a>( <span><code><a href="class-Hawk.Event.html">Hawk\Event</a></code> <var>$event</var>,…</span> )</code>
+			<code><a href="source-class-Hawk.Event.html#142-157" title="Go to source code">trigger</a>( )</code>
 
 			<div class="description short">
-				<p>Trigger an event</p>
+				<p>Trigger the event</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Trigger an event</p>
+				<p>Trigger the event</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$event</var>,…</dt>
-						<dd>The event to trigger</dd>
-					</dl></div>
 
 
 
@@ -480,7 +476,7 @@
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Event.html#31-34" title="Go to source code"><b>ORDER_LAST</b></a>
+						<a href="source-class-Hawk.Event.html#38-41" title="Go to source code"><b>ORDER_LAST</b></a>
 					</code>
 
 					<div class="description short">
@@ -504,7 +500,7 @@
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Event.html#36-39" title="Go to source code"><b>ORDER_FIRST</b></a>
+						<a href="source-class-Hawk.Event.html#43-46" title="Go to source code"><b>ORDER_FIRST</b></a>
 					</code>
 
 					<div class="description short">
@@ -536,7 +532,7 @@
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

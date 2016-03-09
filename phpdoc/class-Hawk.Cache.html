@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -219,7 +220,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Cache.html#10-85" title="Go to source code">Cache.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Cache.html#11-99" title="Go to source code">Cache.php</a>
 		<br>
 	</div>
 
@@ -239,7 +240,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCacheFilePath">#</a>
-			<code><a href="source-class-Hawk.Cache.html#22-29" title="Go to source code">getCacheFilePath</a>( <span>string <var>$cacheFile</var></span> )</code>
+			<code><a href="source-class-Hawk.Cache.html#26-35" title="Go to source code">getCacheFilePath</a>( <span>string <var>$cacheFile</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the full path for a given cache file path, relative to CACHE_DIR</p>
@@ -277,7 +278,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isCached">#</a>
-			<code><a href="source-class-Hawk.Cache.html#31-39" title="Go to source code">isCached</a>( <span>string <var>$source</var></span>, <span>string <var>$cacheFile</var></span> )</code>
+			<code><a href="source-class-Hawk.Cache.html#37-47" title="Go to source code">isCached</a>( <span>string <var>$source</var></span>, <span>string <var>$cacheFile</var></span> )</code>
 
 			<div class="description short">
 				<p>Check if a file is cached. This function returns true if $cacheFile does not exist or if $source is newer than $cacheFile</p>
@@ -297,7 +298,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 
 					<h4>Returns</h4>
 					<div class="list">
-						boolean<br>true if the file cached, else false
+						boolean<br>True if the file cached, else false
 					</div>
 
 
@@ -317,7 +318,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCacheContent">#</a>
-			<code><a href="source-class-Hawk.Cache.html#42-49" title="Go to source code">getCacheContent</a>( <span>string <var>$cacheFile</var></span> )</code>
+			<code><a href="source-class-Hawk.Cache.html#50-59" title="Go to source code">getCacheContent</a>( <span>string <var>$cacheFile</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the content of a cache file</p>
@@ -355,7 +356,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 
 			<td class="name"><div>
 			<a class="anchor" href="#_includeCache">#</a>
-			<code><a href="source-class-Hawk.Cache.html#52-59" title="Go to source code">includeCache</a>( <span>string <var>$cacheFile</var></span> )</code>
+			<code><a href="source-class-Hawk.Cache.html#62-71" title="Go to source code">includeCache</a>( <span>string <var>$cacheFile</var></span> )</code>
 
 			<div class="description short">
 				<p>Include a cache file</p>
@@ -393,7 +394,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 
 			<td class="name"><div>
 			<a class="anchor" href="#_save">#</a>
-			<code><a href="source-class-Hawk.Cache.html#62-72" title="Go to source code">save</a>( <span>string <var>$cacheFile</var></span>, <span>string <var>$content</var></span> )</code>
+			<code><a href="source-class-Hawk.Cache.html#74-85" title="Go to source code">save</a>( <span>string <var>$cacheFile</var></span>, <span>string <var>$content</var></span> )</code>
 
 			<div class="description short">
 				<p>Save data in a cache file</p>
@@ -406,7 +407,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$cacheFile</var></dt>
-						<dd>$caheFile The path of the cache file, relative to CACHE_DIR</dd>
+						<dd>The path of the cache file, relative to CACHE_DIR</dd>
 						<dt><var>$content</var></dt>
 						<dd>The content to write in the cache file</dd>
 					</dl></div>
@@ -429,7 +430,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 
 			<td class="name"><div>
 			<a class="anchor" href="#_clear">#</a>
-			<code><a href="source-class-Hawk.Cache.html#75-81" title="Go to source code">clear</a>( <span>string <var>$cacheFile</var> = <span class="php-quote">'*'</span></span> )</code>
+			<code><a href="source-class-Hawk.Cache.html#88-95" title="Go to source code">clear</a>( <span>string <var>$cacheFile</var> = <span class="php-quote">'*'</span></span> )</code>
 
 			<div class="description short">
 				<p>Clear a cache file or directory</p>
@@ -478,11 +479,11 @@ and detect if a file is cached. This class is very useful to increase the applic
 		<tr data-order="instance" id="$instance">
 			<td class="attributes"><code>
 				protected static 
-				
+				<code><a href="class-Hawk.Cache.html">Hawk\Cache</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Cache.html#17-20" title="Go to source code"><var>$instance</var></a>
+					<a href="source-class-Hawk.Cache.html#19-24" title="Go to source code"><var>$instance</var></a>
 
 				<div class="description short">
 					<p>The cache instance</p>
@@ -515,7 +516,7 @@ and detect if a file is cached. This class is very useful to increase the applic
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

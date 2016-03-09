@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -218,7 +219,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Request.html#9-227" title="Go to source code">Request.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Request.html#11-257" title="Go to source code">Request.php</a>
 		<br>
 	</div>
 
@@ -238,7 +239,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.Request.html#61-115" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Hawk.Request.html#81-135" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Constrcutor, initialize the instance with the HTTP request data</p>
@@ -269,7 +270,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getMethod">#</a>
-			<code><a href="source-class-Hawk.Request.html#118-125" title="Go to source code">getMethod</a>( )</code>
+			<code><a href="source-class-Hawk.Request.html#138-145" title="Go to source code">getMethod</a>( )</code>
 
 			<div class="description short">
 				<p>Get the HTTP request method</p>
@@ -302,7 +303,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUri">#</a>
-			<code><a href="source-class-Hawk.Request.html#128-135" title="Go to source code">getUri</a>( )</code>
+			<code><a href="source-class-Hawk.Request.html#148-155" title="Go to source code">getUri</a>( )</code>
 
 			<div class="description short">
 				<p>Get the HTTP request URI</p>
@@ -335,7 +336,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAjax">#</a>
-			<code><a href="source-class-Hawk.Request.html#138-145" title="Go to source code">isAjax</a>( )</code>
+			<code><a href="source-class-Hawk.Request.html#158-165" title="Go to source code">isAjax</a>( )</code>
 
 			<div class="description short">
 				<p>Check if the request is an AJAX request</p>
@@ -368,7 +369,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_clientIp">#</a>
-			<code><a href="source-class-Hawk.Request.html#148-155" title="Go to source code">clientIp</a>( )</code>
+			<code><a href="source-class-Hawk.Request.html#168-175" title="Go to source code">clientIp</a>( )</code>
 
 			<div class="description short">
 				<p>Get the client IP address.</p>
@@ -401,7 +402,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBody">#</a>
-			<code><a href="source-class-Hawk.Request.html#158-170" title="Go to source code">getBody</a>( <span>string <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.Request.html#178-192" title="Go to source code">getBody</a>( <span>string <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>This function returns the value of the variable $name in the request body, or all the body if $name is not provided</p>
@@ -439,7 +440,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFiles">#</a>
-			<code><a href="source-class-Hawk.Request.html#172-184" title="Go to source code">getFiles</a>( <span>string <var>$name</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.Request.html#194-208" title="Go to source code">getFiles</a>( <span>string <var>$name</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Get the request uploaded files for the given name, or all files if $name is not provided</p>
@@ -477,7 +478,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getParams">#</a>
-			<code><a href="source-class-Hawk.Request.html#186-198" title="Go to source code">getParams</a>( <span>string <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.Request.html#210-224" title="Go to source code">getParams</a>( <span>string <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>This function returns the value of the parameter $name, or all the parameters if $name is not provided</p>
@@ -515,7 +516,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getHeaders">#</a>
-			<code><a href="source-class-Hawk.Request.html#200-212" title="Go to source code">getHeaders</a>( <span>string <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.Request.html#226-240" title="Go to source code">getHeaders</a>( <span>string <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>This function returns the header value for the key $name, of all the headers if $name is not provided</p>
@@ -553,7 +554,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCookies">#</a>
-			<code><a href="source-class-Hawk.Request.html#214-226" title="Go to source code">getCookies</a>( <span>string <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.Request.html#242-256" title="Go to source code">getCookies</a>( <span>string <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>This function returns the value of the cookie named $name, or all cookies if $name is not provided</p>
@@ -609,7 +610,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#14-18" title="Go to source code"><var>$clientIp</var></a>
+					<a href="source-class-Hawk.Request.html#17-22" title="Go to source code"><var>$clientIp</var></a>
 
 				<div class="description short">
 					<p>The clientIp, registered as static variable, to avoid to calculate it each time</p>
@@ -630,11 +631,11 @@
 		<tr data-order="uri" id="$uri">
 			<td class="attributes"><code>
 				public  
-				
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#20-23" title="Go to source code"><var>$uri</var></a>
+					<a href="source-class-Hawk.Request.html#24-29" title="Go to source code"><var>$uri</var></a>
 
 				<div class="description short">
 					<p>The request URI</p>
@@ -655,18 +656,18 @@
 		<tr data-order="method" id="$method">
 			<td class="attributes"><code>
 				public  
-				
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#25-28" title="Go to source code"><var>$method</var></a>
+					<a href="source-class-Hawk.Request.html#31-36" title="Go to source code"><var>$method</var></a>
 
 				<div class="description short">
-					<p>The request method</p>
+					<p>The request method (GET, POST, PATCH, DELETE, PUT)</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>The request method</p>
+					<p>The request method (GET, POST, PATCH, DELETE, PUT)</p>
 
 				</div>
 			</td>
@@ -680,11 +681,11 @@
 		<tr data-order="params" id="$params">
 			<td class="attributes"><code>
 				public  
-				
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#30-33" title="Go to source code"><var>$params</var></a>
+					<a href="source-class-Hawk.Request.html#38-43" title="Go to source code"><var>$params</var></a>
 
 				<div class="description short">
 					<p>The request parameters</p>
@@ -705,11 +706,11 @@
 		<tr data-order="headers" id="$headers">
 			<td class="attributes"><code>
 				public  
-				
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#35-38" title="Go to source code"><var>$headers</var></a>
+					<a href="source-class-Hawk.Request.html#45-50" title="Go to source code"><var>$headers</var></a>
 
 				<div class="description short">
 					<p>The request headers</p>
@@ -730,11 +731,11 @@
 		<tr data-order="body" id="$body">
 			<td class="attributes"><code>
 				public  
-				
+				mixed
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#40-43" title="Go to source code"><var>$body</var></a>
+					<a href="source-class-Hawk.Request.html#52-57" title="Go to source code"><var>$body</var></a>
 
 				<div class="description short">
 					<p>The request body</p>
@@ -759,7 +760,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#45-48" title="Go to source code"><var>$files</var></a>
+					<a href="source-class-Hawk.Request.html#59-64" title="Go to source code"><var>$files</var></a>
 
 				<div class="description short">
 					<p>The uploaded files</p>
@@ -784,7 +785,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#50-53" title="Go to source code"><var>$cookies</var></a>
+					<a href="source-class-Hawk.Request.html#66-71" title="Go to source code"><var>$cookies</var></a>
 
 				<div class="description short">
 					<p>The request sent cookies</p>
@@ -805,11 +806,11 @@
 		<tr data-order="instance" id="$instance">
 			<td class="attributes"><code>
 				protected static 
-				
+				<code><a href="class-Hawk.Request.html">Hawk\Request</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Request.html#55-58" title="Go to source code"><var>$instance</var></a>
+					<a href="source-class-Hawk.Request.html#73-78" title="Go to source code"><var>$instance</var></a>
 
 				<div class="description short">
 					<p>The request instance</p>
@@ -842,7 +843,7 @@
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

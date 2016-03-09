@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -227,7 +228,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Model.html#8-377" title="Go to source code">Model.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Model.html#11-437" title="Go to source code">Model.php</a>
 		<br>
 	</div>
 
@@ -247,7 +248,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.Model.html#34-40" title="Go to source code">__construct</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#41-48" title="Go to source code">__construct</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Constructor : Instanciate a new Model object</p>
@@ -281,7 +282,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAll">#</a>
-			<code><a href="source-class-Hawk.Model.html#43-52" title="Go to source code">getAll</a>( <span>string <var>$index</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$order</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#51-64" title="Go to source code">getAll</a>( <span>string <var>$index</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$order</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Get all the elements of the table</p>
@@ -294,11 +295,13 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$index</var></dt>
-						<dd>The field that will be used to affect the result array keys. If not set, the method will return a non associative array</dd>
+						<dd><p>The field that will be used to affect the result array keys.
+                       If not set, the method will return a non associative array</p></dd>
 						<dt><var>$fields</var></dt>
 						<dd>The fields to set in the instances</dd>
 						<dt><var>$order</var></dt>
-						<dd>The order to get the results. Each key of this array must be a column name in the table, and the associated value is the order value ('ASC' or 'DESC')</dd>
+						<dd><p>The order to get the results. Each key of this array must be a column name in the table,
+                       and the associated value is the order value ('ASC' or 'DESC')</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -323,7 +326,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getById">#</a>
-			<code><a href="source-class-Hawk.Model.html#55-64" title="Go to source code">getById</a>( <span>integer <var>$id</var></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#67-78" title="Go to source code">getById</a>( <span>integer <var>$id</var></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Get a model instance by it primary column</p>
@@ -363,7 +366,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getByExample">#</a>
-			<code><a href="source-class-Hawk.Model.html#67-81" title="Go to source code">getByExample</a>( <span><code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$example</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#81-99" title="Go to source code">getByExample</a>( <span><code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$example</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Get a model instance by an example</p>
@@ -403,7 +406,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getListByExample">#</a>
-			<code><a href="source-class-Hawk.Model.html#84-101" title="Go to source code">getListByExample</a>( <span><code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$example</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$index</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$order</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#102-125" title="Go to source code">getListByExample</a>( <span><code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$example</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$index</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$order</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Get a list of model instances by an example</p>
@@ -418,11 +421,13 @@
 						<dt><var>$example</var></dt>
 						<dd>The example to find the data lines</dd>
 						<dt><var>$index</var></dt>
-						<dd>The field that will be used as array key in the result. If not set, the result will be a non associative array</dd>
+						<dd><p>The field that will be used as array key in the result.
+                          If not set, the result will be a non associative array</p></dd>
 						<dt><var>$fields</var></dt>
 						<dd>The fields to set in the instances</dd>
 						<dt><var>$order</var></dt>
-						<dd>The order to get the results. Each key of this array must be a column name in the table, and the associated value is the order value ('ASC' or 'DESC')</dd>
+						<dd><p>The order to get the results. Each key of this array must be a column name in the table,
+                          and the associated value is the order value ('ASC' or 'DESC')</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -447,7 +452,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBySQL">#</a>
-			<code><a href="source-class-Hawk.Model.html#104-120" title="Go to source code">getBySQL</a>( <span>string <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#128-148" title="Go to source code">getBySQL</a>( <span>string <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Get a model instance by sql condition</p>
@@ -489,7 +494,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getListBySQL">#</a>
-			<code><a href="source-class-Hawk.Model.html#123-142" title="Go to source code">getListBySQL</a>( <span>string <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$index</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$order</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#151-176" title="Go to source code">getListBySQL</a>( <span>string <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$index</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$order</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Get a list of model instances by a SQL condition</p>
@@ -506,11 +511,13 @@
 						<dt><var>$binds</var></dt>
 						<dd>The binded values</dd>
 						<dt><var>$index</var></dt>
-						<dd>The field that will be used as array key in the result. If not set, the result will be a non associative array</dd>
+						<dd><p>The field that will be used as array key in the result.
+                      If not set, the result will be a non associative array</p></dd>
 						<dt><var>$fields</var></dt>
 						<dd>The fields to set in the instances</dd>
 						<dt><var>$order</var></dt>
-						<dd>The order to get the results. Each key of this array must be a column name in the table, and the associated value is the order value ('ASC' or 'DESC')</dd>
+						<dd><p>The order to get the results. Each key of this array must be a column name in the table,
+                       and the associated value is the order value ('ASC' or 'DESC')</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -535,7 +542,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteByExample">#</a>
-			<code><a href="source-class-Hawk.Model.html#146-153" title="Go to source code">deleteByExample</a>( <span><code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$example</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.Model.html#180-189" title="Go to source code">deleteByExample</a>( <span><code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$example</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Delete data in the database from an example</p>
@@ -573,7 +580,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_deleteBySQL">#</a>
-			<code><a href="source-class-Hawk.Model.html#155-163" title="Go to source code">deleteBySQL</a>( <span>string <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#191-201" title="Go to source code">deleteBySQL</a>( <span>string <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Delete data in the database from a SQL condition</p>
@@ -615,7 +622,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countElementsByExample">#</a>
-			<code><a href="source-class-Hawk.Model.html#166-174" title="Go to source code">countElementsByExample</a>( <span><code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$example</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$group</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#204-214" title="Go to source code">countElementsByExample</a>( <span><code><a href="class-Hawk.DBExample.html">Hawk\DBExample</a></code> <var>$example</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$group</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Count the number of elements filtered by an example</p>
@@ -657,7 +664,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_countElementsBySQL">#</a>
-			<code><a href="source-class-Hawk.Model.html#177-186" title="Go to source code">countElementsBySQL</a>( <span>string <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$group</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Model.html#217-228" title="Go to source code">countElementsBySQL</a>( <span>string <var>$where</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$binds</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$group</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Count the number of elements filtered by a SQL condition</p>
@@ -703,16 +710,18 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_save">#</a>
-			<code><a href="source-class-Hawk.Model.html#207-233" title="Go to source code">save</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#250-279" title="Go to source code">save</a>( )</code>
 
 			<div class="description short">
-				<p>This method save a new Model in the database or update it if it exists. It is based on INSERT ... ON DUPLICATE KEY.
-if a new element is saved, then the created id is set to the instance</p>
+				<p>This method save a new Model in the database or update it if it exists.
+It is based on INSERT ... ON DUPLICATE KEY.
+If a new element is saved, then the id (or the value of the primary key) is set on the instance corresponding property</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>This method save a new Model in the database or update it if it exists. It is based on INSERT ... ON DUPLICATE KEY.
-if a new element is saved, then the created id is set to the instance</p>
+				<p>This method save a new Model in the database or update it if it exists.
+It is based on INSERT ... ON DUPLICATE KEY.
+If a new element is saved, then the id (or the value of the primary key) is set on the instance corresponding property</p>
 
 
 
@@ -727,14 +736,14 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="attributes"><code>
 				 public static
-				
+				<code><a href="class-Hawk.Model.html">Hawk\Model</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-Hawk.Model.html#236-249" title="Go to source code">add</a>( <span>array <var>$data</var></span> )</code>
+			<code><a href="source-class-Hawk.Model.html#282-297" title="Go to source code">add</a>( <span>array <var>$data</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a new element in the database</p>
@@ -750,6 +759,10 @@ if a new element is saved, then the created id is set to the instance</p>
 						<dd>The data to insert in the database</dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Hawk.Model.html">Hawk\Model</a></code><br>The added instance
+					</div>
 
 
 
@@ -768,7 +781,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addIfNotExists">#</a>
-			<code><a href="source-class-Hawk.Model.html#252-263" title="Go to source code">addIfNotExists</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#300-311" title="Go to source code">addIfNotExists</a>( )</code>
 
 			<div class="description short">
 				<p>Add the model in the database only if does not alreay exists</p>
@@ -797,7 +810,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_update">#</a>
-			<code><a href="source-class-Hawk.Model.html#266-273" title="Go to source code">update</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#314-321" title="Go to source code">update</a>( )</code>
 
 			<div class="description short">
 				<p>Update the model data in the database</p>
@@ -826,7 +839,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_delete">#</a>
-			<code><a href="source-class-Hawk.Model.html#276-288" title="Go to source code">delete</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#324-337" title="Go to source code">delete</a>( )</code>
 
 			<div class="description short">
 				<p>Delete the model data from the database</p>
@@ -859,7 +872,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getData">#</a>
-			<code><a href="source-class-Hawk.Model.html#291-297" title="Go to source code">getData</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#340-347" title="Go to source code">getData</a>( )</code>
 
 			<div class="description short">
 				<p>Get the model data, only the data present in the database.</p>
@@ -892,20 +905,23 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_set">#</a>
-			<code><a href="source-class-Hawk.Model.html#301-315" title="Go to source code">set</a>( <span>string|array <var>$field</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.Model.html#351-368" title="Go to source code">set</a>( <span>string|array <var>$field</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
-				<p>Set a property value to the object. You can use this method to set only one property, or an array of properties (where key are the names of the properties to set, and values their values)</p>
+				<p>Set a property value to the object.
+You can use this method to set only one property, or an array of properties</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Set a property value to the object. You can use this method to set only one property, or an array of properties (where key are the names of the properties to set, and values their values)</p>
+				<p>Set a property value to the object.
+You can use this method to set only one property, or an array of properties</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$field</var></dt>
-						<dd>If a string is set, then it is the name of the property. If an array is set, then set multiple properties will be set</dd>
+						<dd><p>If a string is set, then it is the name of the property.
+                           If an array is set, then set multiple properties will be set</p></dd>
 						<dt><var>$value</var></dt>
 						<dd>The value to set to the property, only if $field is a string</dd>
 					</dl></div>
@@ -928,7 +944,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getTable">#</a>
-			<code><a href="source-class-Hawk.Model.html#318-324" title="Go to source code">getTable</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#371-378" title="Go to source code">getTable</a>( )</code>
 
 			<div class="description short">
 				<p>Get the table name of this model</p>
@@ -961,7 +977,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPrimaryColumn">#</a>
-			<code><a href="source-class-Hawk.Model.html#327-333" title="Go to source code">getPrimaryColumn</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#381-388" title="Go to source code">getPrimaryColumn</a>( )</code>
 
 			<div class="description short">
 				<p>Get the primary column of the model</p>
@@ -994,7 +1010,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDbName">#</a>
-			<code><a href="source-class-Hawk.Model.html#336-342" title="Go to source code">getDbName</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#391-398" title="Go to source code">getDbName</a>( )</code>
 
 			<div class="description short">
 				<p>Get the DB instance name of the model</p>
@@ -1027,7 +1043,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getDbInstance">#</a>
-			<code><a href="source-class-Hawk.Model.html#345-351" title="Go to source code">getDbInstance</a>( )</code>
+			<code><a href="source-class-Hawk.Model.html#401-408" title="Go to source code">getDbInstance</a>( )</code>
 
 			<div class="description short">
 				<p>Get the DB instance of the model</p>
@@ -1060,7 +1076,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setTable">#</a>
-			<code><a href="source-class-Hawk.Model.html#354-360" title="Go to source code">setTable</a>( <span>string <var>$table</var></span> )</code>
+			<code><a href="source-class-Hawk.Model.html#411-418" title="Go to source code">setTable</a>( <span>string <var>$table</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the table name of the model</p>
@@ -1094,7 +1110,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setPrimaryColumn">#</a>
-			<code><a href="source-class-Hawk.Model.html#362-368" title="Go to source code">setPrimaryColumn</a>( <span>string <var>$primaryColumn</var></span> )</code>
+			<code><a href="source-class-Hawk.Model.html#420-427" title="Go to source code">setPrimaryColumn</a>( <span>string <var>$primaryColumn</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the primary column of the model</p>
@@ -1128,7 +1144,7 @@ if a new element is saved, then the created id is set to the instance</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setDbName">#</a>
-			<code><a href="source-class-Hawk.Model.html#370-376" title="Go to source code">setDbName</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Hawk.Model.html#429-436" title="Go to source code">setDbName</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Set the DB instance name of the model</p>
@@ -1182,7 +1198,7 @@ if a new element is saved, then the created id is set to the instance</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Model.html#15-19" title="Go to source code"><var>$tablename</var></a>
+					<a href="source-class-Hawk.Model.html#19-24" title="Go to source code"><var>$tablename</var></a>
 
 				<div class="description short">
 					<p>The table name containing the data in database</p>
@@ -1207,7 +1223,7 @@ if a new element is saved, then the created id is set to the instance</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Model.html#21-25" title="Go to source code"><var>$primaryColumn</var></a>
+					<a href="source-class-Hawk.Model.html#26-31" title="Go to source code"><var>$primaryColumn</var></a>
 
 				<div class="description short">
 					<p>The primary column of the elements in the table (default 'id')</p>
@@ -1232,7 +1248,7 @@ if a new element is saved, then the created id is set to the instance</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Model.html#27-31" title="Go to source code"><var>$dbname</var></a>
+					<a href="source-class-Hawk.Model.html#33-38" title="Go to source code"><var>$dbname</var></a>
 
 				<div class="description short">
 					<p>The DB instance name to get data in database default MAINDB</p>
@@ -1265,7 +1281,7 @@ if a new element is saved, then the created id is set to the instance</p>
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

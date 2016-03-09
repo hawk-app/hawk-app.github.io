@@ -105,6 +105,9 @@
 	<loc>http://hawk.doc.elvyrra.fr/class-Hawk.HTTPRequest.html</loc>
 </url>
 <url>
+	<loc>http://hawk.doc.elvyrra.fr/class-Hawk.Icon.html</loc>
+</url>
+<url>
 	<loc>http://hawk.doc.elvyrra.fr/class-Hawk.Image.html</loc>
 </url>
 <url>
@@ -247,6 +250,9 @@
 </url>
 <url>
 	<loc>http://hawk.doc.elvyrra.fr/class-Hawk.View.Plugins.Form.html</loc>
+</url>
+<url>
+	<loc>http://hawk.doc.elvyrra.fr/class-Hawk.View.Plugins.Icon.html</loc>
 </url>
 <url>
 	<loc>http://hawk.doc.elvyrra.fr/class-Hawk.View.Plugins.Import.html</loc>

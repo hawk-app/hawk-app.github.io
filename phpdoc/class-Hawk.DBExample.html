@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -190,18 +191,19 @@
 	<p>This class is used to construct SQL WHERE expressions from arrays.
 This can be useful to build simple conditions without writing SQL query and manage binding values
 This class is used in classes Model, Form, ItemList to get data from the database.
-Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR field3 &lt; 12)', create an DBExample like :</p>
+Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR field3 &lt; 12)',
+create an DBExample like :</p>
 
 <pre><span class="php-keyword1">new</span> DBExample(<span class="php-keyword1">array</span>(
-    <span class="php-keyword1">array</span>(<span class="php-quote">'field1'</span> =&gt; <span class="php-quote">&quot;value1&quot;</span>),
-    <span class="php-keyword1">array</span>(<span class="php-quote">'$or'</span> =&gt; <span class="php-keyword1">array</span>(
-        <span class="php-keyword1">array</span>(
-            <span class="php-quote">'field2'</span> =&gt; <span class="php-quote">'$notnull'</span>
-        ),
-        <span class="php-keyword1">array</span>(
-            <span class="php-quote">'field3'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'$lt'</span> =&gt; <span class="php-num">12</span>)
-        )
-    ))
+       <span class="php-keyword1">array</span>(<span class="php-quote">'field1'</span> =&gt; <span class="php-quote">&quot;value1&quot;</span>),
+       <span class="php-keyword1">array</span>(<span class="php-quote">'$or'</span> =&gt; <span class="php-keyword1">array</span>(
+           <span class="php-keyword1">array</span>(
+               <span class="php-quote">'field2'</span> =&gt; <span class="php-quote">'$notnull'</span>
+           ),
+           <span class="php-keyword1">array</span>(
+               <span class="php-quote">'field3'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'$lt'</span> =&gt; <span class="php-num">12</span>)
+           )
+       ))
 ))</pre>
 	</div>
 
@@ -219,7 +221,7 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.DBExample.html#10-188" title="Go to source code">DBExample.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.DBExample.html#11-214" title="Go to source code">DBExample.php</a>
 		<br>
 	</div>
 
@@ -239,7 +241,7 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.DBExample.html#60-66" title="Go to source code">__construct</a>( <span>array <var>$example</var></span> )</code>
+			<code><a href="source-class-Hawk.DBExample.html#68-75" title="Go to source code">__construct</a>( <span>array <var>$example</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -273,7 +275,7 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 
 			<td class="name"><div>
 			<a class="anchor" href="#_make">#</a>
-			<code><a href="source-class-Hawk.DBExample.html#68-77" title="Go to source code">make</a>( <span>array <var>$example</var></span>, <span>array <var>&amp; $binds</var></span> )</code>
+			<code><a href="source-class-Hawk.DBExample.html#77-89" title="Go to source code">make</a>( <span>array <var>$example</var></span>, <span>array <var>&amp; $binds</var></span> )</code>
 
 			<div class="description short">
 				<p>Create a DBExample and parse it</p>
@@ -288,7 +290,8 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 						<dt><var>$example</var></dt>
 						<dd>The DBExample structure</dd>
 						<dt><var>$binds</var></dt>
-						<dd>This variables, passed by reference, will be filled with the binded values during example parsing</dd>
+						<dd><p>This variables, passed by reference,
+                       will be filled with the binded values during example parsing during example parsing</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -313,7 +316,7 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parse">#</a>
-			<code><a href="source-class-Hawk.DBExample.html#80-87" title="Go to source code">parse</a>( <span>array <var>&amp; $binds</var></span> )</code>
+			<code><a href="source-class-Hawk.DBExample.html#92-102" title="Go to source code">parse</a>( <span>array <var>&amp; $binds</var></span> )</code>
 
 			<div class="description short">
 				<p>Parse the example to create the corresponding SQL expression</p>
@@ -326,7 +329,8 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$binds</var></dt>
-						<dd>This variable, passed by reference, will be filled with the binded values during example parsing</dd>
+						<dd><p>This variable, passed by reference,
+                     will be filled with the binded values during example parsing</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -363,7 +367,7 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.DBExample.html#31-35" title="Go to source code"><var>$example</var></a>
+					<a href="source-class-Hawk.DBExample.html#34-39" title="Go to source code"><var>$example</var></a>
 
 				<div class="description short">
 					<p>The example content</p>
@@ -396,7 +400,7 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

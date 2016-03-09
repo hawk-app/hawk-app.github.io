@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -209,6 +210,7 @@ This class is called when, in a view, you write something like that :
 			<code><a href="class-Hawk.View.Plugins.Accordion.html">Hawk\View\Plugins\Accordion</a></code>, 
 			<code><a href="class-Hawk.View.Plugins.Button.html">Hawk\View\Plugins\Button</a></code>, 
 			<code><a href="class-Hawk.View.Plugins.Form.html">Hawk\View\Plugins\Form</a></code>, 
+			<code><a href="class-Hawk.View.Plugins.Icon.html">Hawk\View\Plugins\Icon</a></code>, 
 			<code><a href="class-Hawk.View.Plugins.Import.html">Hawk\View\Plugins\Import</a></code>, 
 			<code><a href="class-Hawk.View.Plugins.Panel.html">Hawk\View\Plugins\Panel</a></code>, 
 			<code><a href="class-Hawk.View.Plugins.Tabs.html">Hawk\View\Plugins\Tabs</a></code>, 
@@ -229,7 +231,7 @@ This class is called when, in a view, you write something like that :
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> View\Plugins<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.ViewPlugin.html#9-64" title="Go to source code">ViewPlugin.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.ViewPlugin.html#11-76" title="Go to source code">ViewPlugin.php</a>
 		<br>
 	</div>
 
@@ -249,7 +251,7 @@ This class is called when, in a view, you write something like that :
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.ViewPlugin.html#33-49" title="Go to source code">__construct</a>( <span>string <var>$viewFile</var></span>, <span>array <var>$viewData</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.ViewPlugin.html#42-59" title="Go to source code">__construct</a>( <span>string <var>$viewFile</var></span>, <span>array <var>$viewData</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Contructor</p>
@@ -287,7 +289,7 @@ This class is called when, in a view, you write something like that :
 
 			<td class="name"><div>
 			<a class="anchor" href="#_display">#</a>
-			<code><a href="source-class-Hawk.ViewPlugin.html#51-55" title="Go to source code">display</a>( )</code>
+			<code><a href="source-class-Hawk.ViewPlugin.html#61-66" title="Go to source code">display</a>( )</code>
 
 			<div class="description short">
 				<p>Display the plugin. This abstract method must be overriden in each inherited class and return the HTML content corresponding to the instance</p>
@@ -320,7 +322,7 @@ This class is called when, in a view, you write something like that :
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Hawk.ViewPlugin.html#57-63" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-Hawk.ViewPlugin.html#68-75" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>Display the plugin. This abstract method must be overriden in each inherited class and return the HTML content corresponding to the instance</p>
@@ -369,11 +371,11 @@ This class is called when, in a view, you write something like that :
 		<tr data-order="viewFile" id="$viewFile">
 			<td class="attributes"><code>
 				protected  
-				
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ViewPlugin.html#18-21" title="Go to source code"><var>$viewFile</var></a>
+					<a href="source-class-Hawk.ViewPlugin.html#21-26" title="Go to source code"><var>$viewFile</var></a>
 
 				<div class="description short">
 					<p>The filename of the view that calls the plugin</p>
@@ -394,11 +396,11 @@ This class is called when, in a view, you write something like that :
 		<tr data-order="viewData" id="$viewData">
 			<td class="attributes"><code>
 				protected  
-				
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ViewPlugin.html#23-26" title="Go to source code"><var>$viewData</var></a>
+					<a href="source-class-Hawk.ViewPlugin.html#28-33" title="Go to source code"><var>$viewData</var></a>
 
 				<div class="description short">
 					<p>The data in the parent view that calls the plugin</p>
@@ -419,11 +421,11 @@ This class is called when, in a view, you write something like that :
 		<tr data-order="params" id="$params">
 			<td class="attributes"><code>
 				protected  
-				
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ViewPlugin.html#28-31" title="Go to source code"><var>$params</var></a>
+					<a href="source-class-Hawk.ViewPlugin.html#35-40" title="Go to source code"><var>$params</var></a>
 
 				<div class="description short">
 					<p>The plugin instance parameters</p>
@@ -456,7 +458,7 @@ This class is called when, in a view, you write something like that :
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -218,7 +219,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Utils<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.FileSystem.html#11-146" title="Go to source code">FileSystem.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.FileSystem.html#12-172" title="Go to source code">FileSystem.php</a>
 		<br>
 	</div>
 
@@ -238,7 +239,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getAllFilesInDir">#</a>
-			<code><a href="source-class-Hawk.FileSystem.html#31-41" title="Go to source code">getAllFilesInDir</a>( <span>string <var>$dir</var></span> )</code>
+			<code><a href="source-class-Hawk.FileSystem.html#46-60" title="Go to source code">getAllFilesInDir</a>( <span>string <var>$dir</var></span> )</code>
 
 			<div class="description short">
 				<p>Get all files in a directory, including those beginning by '.'</p>
@@ -276,7 +277,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_copy">#</a>
-			<code><a href="source-class-Hawk.FileSystem.html#43-80" title="Go to source code">copy</a>( <span>string <var>$source</var></span>, <span>string <var>$dest</var></span> )</code>
+			<code><a href="source-class-Hawk.FileSystem.html#62-99" title="Go to source code">copy</a>( <span>string <var>$source</var></span>, <span>string <var>$dest</var></span> )</code>
 
 			<div class="description short">
 				<p>Equivalent to cp -r</p>
@@ -312,7 +313,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_find">#</a>
-			<code><a href="source-class-Hawk.FileSystem.html#83-114" title="Go to source code">find</a>( <span>string <var>$source</var></span>, <span>string <var>$pattern</var></span>, <span>string <var>$type</var> = <code><a href="class-Hawk.FileSystem.html#FIND_ANY_TYPE">Hawk\FileSystem::<b>FIND_ANY_TYPE</b></a></code></span> )</code>
+			<code><a href="source-class-Hawk.FileSystem.html#102-138" title="Go to source code">find</a>( <span>string <var>$source</var></span>, <span>string <var>$pattern</var></span>, <span>string <var>$type</var> = <code><a href="class-Hawk.FileSystem.html#FIND_ANY_TYPE">Hawk\FileSystem::<b>FIND_ANY_TYPE</b></a></code></span> )</code>
 
 			<div class="description short">
 				<p>Find files by a pattern</p>
@@ -354,7 +355,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Hawk.FileSystem.html#117-145" title="Go to source code">remove</a>( <span>string <var>$source</var></span> )</code>
+			<code><a href="source-class-Hawk.FileSystem.html#141-171" title="Go to source code">remove</a>( <span>string <var>$source</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove a directory or a file</p>
@@ -406,7 +407,7 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.FileSystem.html#16-19" title="Go to source code"><b>DS</b></a>
+						<a href="source-class-Hawk.FileSystem.html#18-21" title="Go to source code"><b>DS</b></a>
 					</code>
 
 					<div class="description short">
@@ -430,15 +431,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.FileSystem.html#21" title="Go to source code"><b>FIND_FILE_ONLY</b></a>
+						<a href="source-class-Hawk.FileSystem.html#23-26" title="Go to source code"><b>FIND_FILE_ONLY</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>Constant to find only files in Filsystem::find</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>Constant to find only files in Filsystem::find</p>
 
 					</div>
 				</td>
@@ -454,15 +455,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.FileSystem.html#22" title="Go to source code"><b>FIND_DIR_ONLY</b></a>
+						<a href="source-class-Hawk.FileSystem.html#28-31" title="Go to source code"><b>FIND_DIR_ONLY</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>Constant to find only directories in Filsystem::find</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>Constant to find only directories in Filsystem::find</p>
 
 					</div>
 				</td>
@@ -478,15 +479,15 @@
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.FileSystem.html#23" title="Go to source code"><b>FIND_ANY_TYPE</b></a>
+						<a href="source-class-Hawk.FileSystem.html#33-36" title="Go to source code"><b>FIND_ANY_TYPE</b></a>
 					</code>
 
 					<div class="description short">
-						
+						<p>Constant to find both files and directories in Filsystem::find</p>
 					</div>
 
 					<div class="description detailed hidden">
-						
+						<p>Constant to find both files and directories in Filsystem::find</p>
 
 					</div>
 				</td>
@@ -509,11 +510,11 @@
 		<tr data-order="instance" id="$instance">
 			<td class="attributes"><code>
 				protected static 
-				
+				FileSysteme
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.FileSystem.html#25-28" title="Go to source code"><var>$instance</var></a>
+					<a href="source-class-Hawk.FileSystem.html#38-43" title="Go to source code"><var>$instance</var></a>
 
 				<div class="description short">
 					<p>The filesystem instance</p>
@@ -546,7 +547,7 @@
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

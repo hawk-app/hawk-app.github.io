@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -213,7 +214,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Form<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Form.html#8-708" title="Go to source code">Form/Form.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Form.html#11-804" title="Go to source code">Form/Form.php</a>
 		<br>
 	</div>
 
@@ -233,7 +234,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.Form.html#153-240" title="Go to source code">__construct</a>( <span>array <var>$param</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Form.html#199-296" title="Go to source code">__construct</a>( <span>array <var>$param</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -267,7 +268,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInstance">#</a>
-			<code><a href="source-class-Hawk.Form.html#243-256" title="Go to source code">getInstance</a>( <span>string <var>$id</var></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#299-315" title="Go to source code">getInstance</a>( <span>string <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a form instance</p>
@@ -305,7 +306,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setParam">#</a>
-			<code><a href="source-class-Hawk.Form.html#258-270" title="Go to source code">setParam</a>( <span>mixed <var>$param</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#317-332" title="Go to source code">setParam</a>( <span>mixed <var>$param</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Set form parameters</p>
@@ -318,7 +319,9 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$param</var></dt>
-						<dd>The parameter name to set. If this parameter is an array, then this function will set all parameters defined by the keys of this array with the associated value</dd>
+						<dd><p>The parameter name to set.
+                    If this parameter is an array, then this function will set all parameters defined
+                    by the keys of this array with the associated value</p></dd>
 						<dt><var>$value</var></dt>
 						<dd>The value to apply to the parameter</dd>
 					</dl></div>
@@ -341,7 +344,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_reload">#</a>
-			<code><a href="source-class-Hawk.Form.html#273-295" title="Go to source code">reload</a>( )</code>
+			<code><a href="source-class-Hawk.Form.html#335-357" title="Go to source code">reload</a>( )</code>
 
 			<div class="description short">
 				<p>Reload the form data</p>
@@ -370,7 +373,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setData">#</a>
-			<code><a href="source-class-Hawk.Form.html#298-314" title="Go to source code">setData</a>( <span>array <var>$data</var></span>, <span>string <var>$prefix</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#360-379" title="Go to source code">setData</a>( <span>array <var>$data</var></span>, <span>string <var>$prefix</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Set the values for field</p>
@@ -383,9 +386,11 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$data</var></dt>
-						<dd>The data to set, where the keys are the names of the field, and the array values, the values to affect</dd>
+						<dd><p>The data to set, where the keys are the names of the field,
+                      and the array values, the values to affect</p></dd>
 						<dt><var>$prefix</var></dt>
-						<dd>A prefix to apply on the field name, if it is defined as an array (used internally to the class)</dd>
+						<dd><p>A prefix to apply on the field name,
+                      if it is defined as an array (used internally to the class)</p></dd>
 					</dl></div>
 
 
@@ -399,14 +404,14 @@
 
 			<td class="attributes"><code>
 				 public 
-				
+				mixed
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getData">#</a>
-			<code><a href="source-class-Hawk.Form.html#317-334" title="Go to source code">getData</a>( <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#382-403" title="Go to source code">getData</a>( <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Get data of the form</p>
@@ -419,9 +424,15 @@
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
-						<dd>If set, the function will return the value of the field, else it will return an array containing all field values</dd>
+						<dd><p>If set, the function will return the value of the field,
+                    else it will return an array containing all field values</p></dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						mixed<br><p>If $name is set, the function will return the value of the field,
+              else it will return an array containing all field values</p>
+					</div>
 
 
 
@@ -440,7 +451,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addFieldset">#</a>
-			<code><a href="source-class-Hawk.Form.html#337-343" title="Go to source code">addFieldset</a>( <span><code><a href="class-Hawk.FormFieldset.html">Hawk\FormFieldset</a></code> <var>$fieldset</var></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#406-413" title="Go to source code">addFieldset</a>( <span><code><a href="class-Hawk.FormFieldset.html">Hawk\FormFieldset</a></code> <var>$fieldset</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a fieldset to the form</p>
@@ -474,7 +485,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addInput">#</a>
-			<code><a href="source-class-Hawk.Form.html#345-370" title="Go to source code">addInput</a>( <span><code><a href="class-Hawk.FormInput.html">Hawk\FormInput</a></code> <var>$input</var></span>, <span>string <var>$fieldset</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#415-442" title="Go to source code">addInput</a>( <span><code><a href="class-Hawk.FormInput.html">Hawk\FormInput</a></code> <var>$input</var></span>, <span>string <var>$fieldset</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Add an input to the form</p>
@@ -489,7 +500,8 @@
 						<dt><var>$input</var></dt>
 						<dd>The input to insert in the form</dd>
 						<dt><var>$fieldset</var></dt>
-						<dd>(optionnal) The fieldset where to insert the input. If not set, the input will be just included in $form->inputs, out of any fieldset</dd>
+						<dd><p>(optionnal) The fieldset where to insert the input.
+                           If not set, the input will be just included in $form->inputs, out of any fieldset</p></dd>
 					</dl></div>
 
 
@@ -510,7 +522,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_submitted">#</a>
-			<code><a href="source-class-Hawk.Form.html#373-384" title="Go to source code">submitted</a>( )</code>
+			<code><a href="source-class-Hawk.Form.html#445-458" title="Go to source code">submitted</a>( )</code>
 
 			<div class="description short">
 				<p>Defines if the form has been submitted, and if so, return the action to perform (submitted or delete)</p>
@@ -523,7 +535,8 @@
 
 					<h4>Returns</h4>
 					<div class="list">
-						mixed<br>If the form is not submitted, this function will return FALSE. Else, the function will return 'register' or 'delete', depending on the user action
+						mixed<br><p>If the form is not submitted, this function will return FALSE.
+              Else, the function will return 'register' or 'delete', depending on the user action</p>
 					</div>
 
 
@@ -543,7 +556,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_wrap">#</a>
-			<code><a href="source-class-Hawk.Form.html#387-437" title="Go to source code">wrap</a>( <span>string <var>$content</var></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#461-513" title="Go to source code">wrap</a>( <span>string <var>$content</var></span> )</code>
 
 			<div class="description short">
 				<p>This method is used when you define your own template for displaying the form content.
@@ -591,7 +604,7 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Hawk.Form.html#439-445" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-Hawk.Form.html#515-522" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>Display the form (alias of display method)</p>
@@ -624,7 +637,7 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_display">#</a>
-			<code><a href="source-class-Hawk.Form.html#447-473" title="Go to source code">display</a>( )</code>
+			<code><a href="source-class-Hawk.Form.html#524-551" title="Go to source code">display</a>( )</code>
 
 			<div class="description short">
 				<p>Display the form</p>
@@ -657,7 +670,7 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_check">#</a>
-			<code><a href="source-class-Hawk.Form.html#476-505" title="Go to source code">check</a>( <span>boolean <var>$exit</var> = <code><a href="class-Hawk.Form.html#EXIT_JSON">Hawk\Form::<b>EXIT_JSON</b></a></code></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#554-586" title="Go to source code">check</a>( <span>boolean <var>$exit</var> = <code><a href="class-Hawk.Form.html#EXIT_JSON">Hawk\Form::<b>EXIT_JSON</b></a></code></span> )</code>
 
 			<div class="description short">
 				<p>Check if the submitted values are correct</p>
@@ -670,7 +683,8 @@ It will wrap the form content with the</p>
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$exit</var></dt>
-						<dd>If set to true and if the data is not valid, this function will output the validation result on HTTP response</dd>
+						<dd><p>If set to true and if the data is not valid,
+                   this function will output the validation result on HTTP response</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -695,7 +709,7 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_register">#</a>
-			<code><a href="source-class-Hawk.Form.html#507-576" title="Go to source code">register</a>( <span>boolean <var>$exit</var> = <code><a href="class-Hawk.Form.html#EXIT_JSON">Hawk\Form::<b>EXIT_JSON</b></a></code></span>, <span>string <var>$success</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$error</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#588-661" title="Go to source code">register</a>( <span>boolean <var>$exit</var> = <code><a href="class-Hawk.Form.html#EXIT_JSON">Hawk\Form::<b>EXIT_JSON</b></a></code></span>, <span>string <var>$success</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$error</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>Register the submitted data in the database</p>
@@ -737,7 +751,7 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_delete">#</a>
-			<code><a href="source-class-Hawk.Form.html#579-623" title="Go to source code">delete</a>( <span>boolean <var>$exit</var> = <code><a href="class-Hawk.Form.html#EXIT_JSON">Hawk\Form::<b>EXIT_JSON</b></a></code></span>, <span>string <var>$success</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$error</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#664-712" title="Go to source code">delete</a>( <span>boolean <var>$exit</var> = <code><a href="class-Hawk.Form.html#EXIT_JSON">Hawk\Form::<b>EXIT_JSON</b></a></code></span>, <span>string <var>$success</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$error</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>Delete the element from the database</p>
@@ -779,7 +793,7 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_error">#</a>
-			<code><a href="source-class-Hawk.Form.html#625-632" title="Go to source code">error</a>( <span>string <var>$name</var></span>, <span>string <var>$error</var></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#714-722" title="Go to source code">error</a>( <span>string <var>$name</var></span>, <span>string <var>$error</var></span> )</code>
 
 			<div class="description short">
 				<p>Add an error on a field</p>
@@ -815,7 +829,7 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addReturn">#</a>
-			<code><a href="source-class-Hawk.Form.html#635-648" title="Go to source code">addReturn</a>( <span>string <var>$name</var></span>, <span>string <var>$message</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#725-739" title="Go to source code">addReturn</a>( <span>string <var>$name</var></span>, <span>string <var>$message</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>Add data to return to the client. To add several returns in on function call, define the first parameter as an associative array</p>
@@ -851,14 +865,16 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_response">#</a>
-			<code><a href="source-class-Hawk.Form.html#651-686" title="Go to source code">response</a>( <span>string <var>$status</var></span>, <span>string <var>$message</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#742-780" title="Go to source code">response</a>( <span>string <var>$status</var></span>, <span>string <var>$message</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
-				<p>Return the response of the form (generally when submitted), and set the Response HTTP code corresponding to the response, and the response type as JSON</p>
+				<p>Return the response of the form (generally when submitted),
+and set the Response HTTP code corresponding to the response, and the response type as JSON</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Return the response of the form (generally when submitted), and set the Response HTTP code corresponding to the response, and the response type as JSON</p>
+				<p>Return the response of the form (generally when submitted),
+and set the Response HTTP code corresponding to the response, and the response type as JSON</p>
 
 
 					<h4>Parameters</h4>
@@ -891,7 +907,7 @@ It will wrap the form content with the</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_treat">#</a>
-			<code><a href="source-class-Hawk.Form.html#690-707" title="Go to source code">treat</a>( <span>boolean <var>$exit</var> = <code><a href="class-Hawk.Form.html#EXIT_JSON">Hawk\Form::<b>EXIT_JSON</b></a></code></span> )</code>
+			<code><a href="source-class-Hawk.Form.html#784-803" title="Go to source code">treat</a>( <span>boolean <var>$exit</var> = <code><a href="class-Hawk.Form.html#EXIT_JSON">Hawk\Form::<b>EXIT_JSON</b></a></code></span> )</code>
 
 			<div class="description short">
 				<p>Make a generic treatment that detect the action to execute, check the form if necessary, and execute the action</p>
@@ -944,7 +960,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>boolean</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#15" title="Go to source code"><b>NO_EXIT</b></a>
+						<a href="source-class-Hawk.Form.html#19" title="Go to source code"><b>NO_EXIT</b></a>
 					</code>
 
 					<div class="description short">
@@ -968,7 +984,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>boolean</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#16" title="Go to source code"><b>EXIT_JSON</b></a>
+						<a href="source-class-Hawk.Form.html#20" title="Go to source code"><b>EXIT_JSON</b></a>
 					</code>
 
 					<div class="description short">
@@ -992,7 +1008,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#18" title="Go to source code"><b>VIEWS_DIR</b></a>
+						<a href="source-class-Hawk.Form.html#22" title="Go to source code"><b>VIEWS_DIR</b></a>
 					</code>
 
 					<div class="description short">
@@ -1016,7 +1032,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#21" title="Go to source code"><b>STATUS_SUCCESS</b></a>
+						<a href="source-class-Hawk.Form.html#25" title="Go to source code"><b>STATUS_SUCCESS</b></a>
 					</code>
 
 					<div class="description short">
@@ -1040,7 +1056,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#22" title="Go to source code"><b>STATUS_ERROR</b></a>
+						<a href="source-class-Hawk.Form.html#26" title="Go to source code"><b>STATUS_ERROR</b></a>
 					</code>
 
 					<div class="description short">
@@ -1064,7 +1080,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#23" title="Go to source code"><b>STATUS_CHECK_ERROR</b></a>
+						<a href="source-class-Hawk.Form.html#27" title="Go to source code"><b>STATUS_CHECK_ERROR</b></a>
 					</code>
 
 					<div class="description short">
@@ -1088,7 +1104,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#26" title="Go to source code"><b>HTTP_CODE_SUCCESS</b></a>
+						<a href="source-class-Hawk.Form.html#30" title="Go to source code"><b>HTTP_CODE_SUCCESS</b></a>
 					</code>
 
 					<div class="description short">
@@ -1112,7 +1128,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#27" title="Go to source code"><b>HTTP_CODE_CHECK_ERROR</b></a>
+						<a href="source-class-Hawk.Form.html#31" title="Go to source code"><b>HTTP_CODE_CHECK_ERROR</b></a>
 					</code>
 
 					<div class="description short">
@@ -1136,7 +1152,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>integer</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#28" title="Go to source code"><b>HTTP_CODE_ERROR</b></a>
+						<a href="source-class-Hawk.Form.html#32" title="Go to source code"><b>HTTP_CODE_ERROR</b></a>
 					</code>
 
 					<div class="description short">
@@ -1160,7 +1176,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#31" title="Go to source code"><b>ACTION_REGISTER</b></a>
+						<a href="source-class-Hawk.Form.html#35" title="Go to source code"><b>ACTION_REGISTER</b></a>
 					</code>
 
 					<div class="description short">
@@ -1184,7 +1200,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#32" title="Go to source code"><b>ACTION_DELETE</b></a>
+						<a href="source-class-Hawk.Form.html#36" title="Go to source code"><b>ACTION_DELETE</b></a>
 					</code>
 
 					<div class="description short">
@@ -1208,7 +1224,7 @@ It will wrap the form content with the</p>
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Form.html#35" title="Go to source code"><b>DEFAULT_MODEL</b></a>
+						<a href="source-class-Hawk.Form.html#39" title="Go to source code"><b>DEFAULT_MODEL</b></a>
 					</code>
 
 					<div class="description short">
@@ -1243,7 +1259,7 @@ It will wrap the form content with the</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#38-41" title="Go to source code"><var>$method</var></a>
+					<a href="source-class-Hawk.Form.html#42-45" title="Go to source code"><var>$method</var></a>
 
 				<div class="description short">
 					<p>The submit method (Default : POST)</p>
@@ -1268,7 +1284,7 @@ It will wrap the form content with the</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#43-46" title="Go to source code"><var>$name</var></a>
+					<a href="source-class-Hawk.Form.html#47-52" title="Go to source code"><var>$name</var></a>
 
 				<div class="description short">
 					<p>The form name</p>
@@ -1293,7 +1309,7 @@ It will wrap the form content with the</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#48-51" title="Go to source code"><var>$id</var></a>
+					<a href="source-class-Hawk.Form.html#54-59" title="Go to source code"><var>$id</var></a>
 
 				<div class="description short">
 					<p>The form id</p>
@@ -1318,14 +1334,14 @@ It will wrap the form content with the</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#53-56" title="Go to source code"><var>$model</var></a>
+					<a href="source-class-Hawk.Form.html#61-66" title="Go to source code"><var>$model</var></a>
 
 				<div class="description short">
-					<p>The model used for display and database treatment</p>
+					<p>The model class used for display and database treatment</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>The model used for display and database treatment</p>
+					<p>The model class used for display and database treatment</p>
 
 				</div>
 			</td>
@@ -1339,11 +1355,11 @@ It will wrap the form content with the</p>
 		<tr data-order="object" id="$object">
 			<td class="attributes"><code>
 				public  
-				
+				Object
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#58-61" title="Go to source code"><var>$object</var></a>
+					<a href="source-class-Hawk.Form.html#68-73" title="Go to source code"><var>$object</var></a>
 
 				<div class="description short">
 					<p>The object treated by the form</p>
@@ -1368,7 +1384,7 @@ It will wrap the form content with the</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#63-66" title="Go to source code"><var>$labelWidth</var></a>
+					<a href="source-class-Hawk.Form.html#75-80" title="Go to source code"><var>$labelWidth</var></a>
 
 				<div class="description short">
 					<p>The width of the input labels (if defined, overrides the default label width defined in the theme)</p>
@@ -1389,18 +1405,20 @@ It will wrap the form content with the</p>
 		<tr data-order="status" id="$status">
 			<td class="attributes"><code>
 				public  
-				
+				string
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#68-71" title="Go to source code"><var>$status</var></a>
+					<a href="source-class-Hawk.Form.html#82-88" title="Go to source code"><var>$status</var></a>
 
 				<div class="description short">
-					<p>The submission status. This variable can be used if you want to know the treatment status before executing other instructions</p>
+					<p>The submission status.
+This variable can be used if you want to know the treatment status before executing other instructions</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>The submission status. This variable can be used if you want to know the treatment status before executing other instructions</p>
+					<p>The submission status.
+This variable can be used if you want to know the treatment status before executing other instructions</p>
 
 				</div>
 			</td>
@@ -1418,18 +1436,18 @@ It will wrap the form content with the</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#73-78" title="Go to source code"><var>$columns</var></a>
+					<a href="source-class-Hawk.Form.html#90-97" title="Go to source code"><var>$columns</var></a>
 
 				<div class="description short">
-					<p>The number of columns to display the form. Each fieldset will be displayed on a column. For example, if you define 6 fieldsets in your form, and select 3 for this property,
-the form will be displayed on 2 lines, with 3 fieldsets by line.
-Default 1</p>
+					<p>The number of columns to display the form. Each fieldset will be displayed on a column.
+For example, if you define 6 fieldsets in your form, and select 3 for this property,
+the form will be displayed on 2 lines, with 3 fieldsets by line.</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>The number of columns to display the form. Each fieldset will be displayed on a column. For example, if you define 6 fieldsets in your form, and select 3 for this property,
-the form will be displayed on 2 lines, with 3 fieldsets by line.
-Default 1</p>
+					<p>The number of columns to display the form. Each fieldset will be displayed on a column.
+For example, if you define 6 fieldsets in your form, and select 3 for this property,
+the form will be displayed on 2 lines, with 3 fieldsets by line.</p>
 
 				</div>
 			</td>
@@ -1447,7 +1465,7 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#81-84" title="Go to source code"><var>$class</var></a>
+					<a href="source-class-Hawk.Form.html#100-105" title="Go to source code"><var>$class</var></a>
 
 				<div class="description short">
 					<p>This property can be set if you want to apply a css class to the form</p>
@@ -1465,31 +1483,6 @@ Default 1</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="target" id="$target">
-			<td class="attributes"><code>
-				public  
-				string
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Hawk.Form.html#86-89" title="Go to source code"><var>$target</var></a>
-
-				<div class="description short">
-					<p>Defines the target where to submit the form</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Defines the target where to submit the form</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$target" class="anchor">#</a>
-					<code><span class="php-quote">''</span></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="autocomplete" id="$autocomplete">
 			<td class="attributes"><code>
 				public  
@@ -1497,7 +1490,7 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#91-94" title="Go to source code"><var>$autocomplete</var></a>
+					<a href="source-class-Hawk.Form.html#108-113" title="Go to source code"><var>$autocomplete</var></a>
 
 				<div class="description short">
 					<p>Defines if the form can autocompleted (Default true)</p>
@@ -1515,28 +1508,28 @@ Default 1</p>
 				</div>
 			</td>
 		</tr>
-		<tr data-order="enctype" id="$enctype">
+		<tr data-order="fieldsets" id="$fieldsets">
 			<td class="attributes"><code>
 				public  
-				string
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#96-99" title="Go to source code"><var>$enctype</var></a>
+					<a href="source-class-Hawk.Form.html#116-121" title="Go to source code"><var>$fieldsets</var></a>
 
 				<div class="description short">
-					<p>Defines the attribute 'enctype' of the form</p>
+					<p>The form fieldsets</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Defines the attribute 'enctype' of the form</p>
+					<p>The form fieldsets</p>
 
 				</div>
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$enctype" class="anchor">#</a>
-					<code><span class="php-quote">''</span></code>
+					<a href="#$fieldsets" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>()</code>
 				</div>
 			</td>
 		</tr>
@@ -1547,7 +1540,7 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#101-104" title="Go to source code"><var>$inputs</var></a>
+					<a href="source-class-Hawk.Form.html#123-128" title="Go to source code"><var>$inputs</var></a>
 
 				<div class="description short">
 					<p>The form inputs</p>
@@ -1572,7 +1565,7 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#106-109" title="Go to source code"><var>$upload</var></a>
+					<a href="source-class-Hawk.Form.html#130-135" title="Go to source code"><var>$upload</var></a>
 
 				<div class="description short">
 					<p>Defines if the form do an AJAX uplaod</p>
@@ -1597,7 +1590,7 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#111-114" title="Go to source code"><var>$nomessage</var></a>
+					<a href="source-class-Hawk.Form.html#137-142" title="Go to source code"><var>$nomessage</var></a>
 
 				<div class="description short">
 					<p>If set to true, no return message will be displayed when the form is submitted</p>
@@ -1622,14 +1615,14 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#117-120" title="Go to source code"><var>$action</var></a>
+					<a href="source-class-Hawk.Form.html#145-150" title="Go to source code"><var>$action</var></a>
 
 				<div class="description short">
-					<p>Defines the form action. Default the current URL</p>
+					<p>Defines the form action. Default value is the current URL</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>Defines the form action. Default the current URL</p>
+					<p>Defines the form action. Default value is the current URL</p>
 
 				</div>
 			</td>
@@ -1647,7 +1640,7 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#122-125" title="Go to source code"><var>$returns</var></a>
+					<a href="source-class-Hawk.Form.html#152-157" title="Go to source code"><var>$returns</var></a>
 
 				<div class="description short">
 					<p>The data returned by the form</p>
@@ -1672,7 +1665,7 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#127-130" title="Go to source code"><var>$errors</var></a>
+					<a href="source-class-Hawk.Form.html#159-164" title="Go to source code"><var>$errors</var></a>
 
 				<div class="description short">
 					<p>The form errors</p>
@@ -1697,14 +1690,20 @@ Default 1</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Form.html#132-135" title="Go to source code"><var>$reference</var></a>
+					<a href="source-class-Hawk.Form.html#166-175" title="Go to source code"><var>$reference</var></a>
 
 				<div class="description short">
-					<p>The reference to get the object in the database and update it. This property must be displayed as array('field' => 'value', 'field2' => 'value2')</p>
+					<p>The reference to get the object in the database and update it. This property must be displayed as :
+array(
+    'field' => 'value',
+    'field2' => 'value2'
+)</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>The reference to get the object in the database and update it. This property must be displayed as array('field' => 'value', 'field2' => 'value2')</p>
+					<p>The reference to get the object in the database and update it. This property must be displayed as :
+array( 'field' => 'value', 'field2' => 'value2'
+)</p>
 
 				</div>
 			</td>
@@ -1730,7 +1729,7 @@ Default 1</p>
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

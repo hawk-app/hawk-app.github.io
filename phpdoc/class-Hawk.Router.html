@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -218,7 +219,7 @@
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core\Router<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Router.html#10-424" title="Go to source code">Router.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Router.html#11-538" title="Go to source code">Router.php</a>
 		<br>
 	</div>
 
@@ -238,21 +239,23 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_auth">#</a>
-			<code><a href="source-class-Hawk.Router.html#102-120" title="Go to source code">auth</a>( <span>boolean <var>$auth</var></span>, <span>callable <var>$action</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#116-141" title="Go to source code">auth</a>( <span>boolean <var>$auth</var></span>, <span>callable <var>$action</var></span> )</code>
 
 			<div class="description short">
-				<p>Add an authentication condition to match the routes defined inside $action callback. For example, you can write something like :
-App::router()->auth(App::session()->getUser()->isAllowed('admin.all'), function(){
-    App::router()->get('test-route', '/test', array('action' => 'TestController.testMethod'));
-});
-If the user tries to access to /test without the necessary privileges, then a HTTP code 403 (Forbidden) will be returned</p>
+				<p>Add an authentication condition to match the routes defined inside $action callback.
+For example, you can write something like :</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Add an authentication condition to match the routes defined inside $action callback. For example, you can write something like :
-App::router()->auth(App::session()->getUser()->isAllowed('admin.all'), function(){ App::router()->get('test-route', '/test', array('action' => 'TestController.testMethod'));
-});
-If the user tries to access to /test without the necessary privileges, then a HTTP code 403 (Forbidden) will be returned</p>
+				<p>Add an authentication condition to match the routes defined inside $action callback.
+For example, you can write something like :</p>
+
+<pre>App::router()-&gt;auth(App::session()-&gt;getUser()-&gt;isAllowed(<span class="php-quote">'admin.all'</span>), <span class="php-keyword1">function</span>(){
+       App::router()-&gt;get(<span class="php-quote">'test-route'</span>, <span class="php-quote">'/test'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'action'</span> =&gt; <span class="php-quote">'TestController.testMethod'</span>));
+});</pre>
+
+<p>If the user tries to access to /test without the necessary privileges,
+then a HTTP code 403 (Forbidden) will be returned</p>
 
 
 					<h4>Parameters</h4>
@@ -281,7 +284,7 @@ If the user tries to access to /test without the necessary privileges, then a HT
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setProperties">#</a>
-			<code><a href="source-class-Hawk.Router.html#123-138" title="Go to source code">setProperties</a>( <span>array <var>$data</var></span>, <span>callable <var>$action</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#144-160" title="Go to source code">setProperties</a>( <span>array <var>$data</var></span>, <span>callable <var>$action</var></span> )</code>
 
 			<div class="description short">
 				<p>Set properties for all the routes that are defined in the $action callback.
@@ -319,7 +322,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prefix">#</a>
-			<code><a href="source-class-Hawk.Router.html#141-148" title="Go to source code">prefix</a>( <span>string <var>$prefix</var></span>, <span>callable <var>$action</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#163-171" title="Go to source code">prefix</a>( <span>string <var>$prefix</var></span>, <span>callable <var>$action</var></span> )</code>
 
 			<div class="description short">
 				<p>Set a prefix to routes URIs that are defined in $action callback</p>
@@ -355,7 +358,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Hawk.Router.html#151-162" title="Go to source code">get</a>( <span>string <var>$name</var></span>, <span>string <var>$url</var></span>, <span>array <var>$param</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#174-196" title="Go to source code">get</a>( <span>string <var>$name</var></span>, <span>string <var>$path</var></span>, <span>array <var>$param</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a route acessible by GET HTTP requests</p>
@@ -369,13 +372,24 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
 						<dd>The route name. This name must be unique for each route</dd>
-						<dt><var>$url</var></dt>
-						<dd>$uri The route URI, defined like : /path/{param1}/to/{param2}</dd>
+						<dt><var>$path</var></dt>
+						<dd>The route path, defined like : /path/{param1}/to/{param2}</dd>
 						<dt><var>$param</var></dt>
-						<dd><p>The route parameters. This array can have the following data :
-                    - 'action' string (required) : The controller method to call when the route is matched. formatted like this : 'ControllerClass.method'
-                    - 'where' array (optionnal) : An array defining each parameter pattern, where keys are the names of the route parameters, and values are the regular expression to match (without delimiters)
-                    - 'default' array (optionnal) : An array defining the default values of parameters. This is useful to generate a URI from a route name (method getUri), without giving all parameters values</p></dd>
+						<dd><p>The route parameters. This array can have the following data :</p>
+
+<ul>
+                          <li>'action' string (required) : The controller method to call when the route is matched,
+                              formatted like this : 'ControllerClass.method'
+                          </li>
+                          <li>'where' array (optionnal) : An array defining each parameter pattern,
+                              where keys are the names of the route parameters,
+                              and values are the regular expression to match (without delimiters).
+                          </li>
+                          <li>'default' array (optionnal) : An array defining the default values of parameters.
+                              This is useful to generate a URI from a route name (method getUri),
+                              without giving all parameters values
+                          </li>
+                      </ul></dd>
 					</dl></div>
 
 
@@ -396,7 +410,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_post">#</a>
-			<code><a href="source-class-Hawk.Router.html#165-176" title="Go to source code">post</a>( <span>string <var>$name</var></span>, <span>string <var>$url</var></span>, <span>array <var>$param</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#199-221" title="Go to source code">post</a>( <span>string <var>$name</var></span>, <span>string <var>$path</var></span>, <span>array <var>$param</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a route acessible by POST HTTP requests</p>
@@ -410,13 +424,24 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
 						<dd>The route name. This name must be unique for each route</dd>
-						<dt><var>$url</var></dt>
-						<dd>$uri The route URI, defined like : /path/{param1}/to/{param2}</dd>
+						<dt><var>$path</var></dt>
+						<dd>The route path, defined like : /path/{param1}/to/{param2}</dd>
 						<dt><var>$param</var></dt>
-						<dd><p>The route parameters. This array can have the following data :
-                    - 'action' string (required) : The controller method to call when the route is matched. formatted like this : 'ControllerClass.method'
-                    - 'where' array (optionnal) : An array defining each parameter pattern, where keys are the names of the route parameters, and values are the regular expression to match (without delimiters)
-                    - 'default' array (optionnal) : An array defining the default values of parameters. This is useful to generate a URI from a route name (method getUri), without giving all parameters values</p></dd>
+						<dd><p>The route parameters. This array can have the following data :</p>
+
+<ul>
+                          <li>'action' string (required) : The controller method to call when the route is matched,
+                              formatted like this : 'ControllerClass.method'
+                          </li>
+                          <li>'where' array (optionnal) : An array defining each parameter pattern,
+                              where keys are the names of the route parameters,
+                              and values are the regular expression to match (without delimiters).
+                          </li>
+                          <li>'default' array (optionnal) : An array defining the default values of parameters.
+                              This is useful to generate a URI from a route name (method getUri),
+                              without giving all parameters values
+                          </li>
+                      </ul></dd>
 					</dl></div>
 
 
@@ -437,7 +462,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_put">#</a>
-			<code><a href="source-class-Hawk.Router.html#179-190" title="Go to source code">put</a>( <span>string <var>$name</var></span>, <span>string <var>$url</var></span>, <span>array <var>$param</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#224-246" title="Go to source code">put</a>( <span>string <var>$name</var></span>, <span>string <var>$path</var></span>, <span>array <var>$param</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a route acessible by PUT HTTP requests</p>
@@ -451,13 +476,24 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
 						<dd>The route name. This name must be unique for each route</dd>
-						<dt><var>$url</var></dt>
-						<dd>$uri The route URI, defined like : /path/{param1}/to/{param2}</dd>
+						<dt><var>$path</var></dt>
+						<dd>The route path, defined like : /path/{param1}/to/{param2}</dd>
 						<dt><var>$param</var></dt>
-						<dd><p>The route parameters. This array can have the following data :
-                    - 'action' string (required) : The controller method to call when the route is matched. formatted like this : 'ControllerClass.method'
-                    - 'where' array (optionnal) : An array defining each parameter pattern, where keys are the names of the route parameters, and values are the regular expression to match (without delimiters)
-                    - 'default' array (optionnal) : An array defining the default values of parameters. This is useful to generate a URI from a route name (method getUri), without giving all parameters values</p></dd>
+						<dd><p>The route parameters. This array can have the following data :</p>
+
+<ul>
+                          <li>'action' string (required) : The controller method to call when the route is matched,
+                              formatted like this : 'ControllerClass.method'
+                          </li>
+                          <li>'where' array (optionnal) : An array defining each parameter pattern,
+                              where keys are the names of the route parameters,
+                              and values are the regular expression to match (without delimiters).
+                          </li>
+                          <li>'default' array (optionnal) : An array defining the default values of parameters.
+                              This is useful to generate a URI from a route name (method getUri),
+                              without giving all parameters values
+                          </li>
+                      </ul></dd>
 					</dl></div>
 
 
@@ -478,7 +514,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_delete">#</a>
-			<code><a href="source-class-Hawk.Router.html#193-204" title="Go to source code">delete</a>( <span>string <var>$name</var></span>, <span>string <var>$url</var></span>, <span>array <var>$param</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#249-271" title="Go to source code">delete</a>( <span>string <var>$name</var></span>, <span>string <var>$path</var></span>, <span>array <var>$param</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a route acessible by DELETE HTTP requests</p>
@@ -492,13 +528,24 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
 						<dd>The route name. This name must be unique for each route</dd>
-						<dt><var>$url</var></dt>
-						<dd>$uri The route URI, defined like : /path/{param1}/to/{param2}</dd>
+						<dt><var>$path</var></dt>
+						<dd>The route path, defined like : /path/{param1}/to/{param2}</dd>
 						<dt><var>$param</var></dt>
-						<dd><p>The route parameters. This array can have the following data :
-                    - 'action' string (required) : The controller method to call when the route is matched. formatted like this : 'ControllerClass.method'
-                    - 'where' array (optionnal) : An array defining each parameter pattern, where keys are the names of the route parameters, and values are the regular expression to match (without delimiters)
-                    - 'default' array (optionnal) : An array defining the default values of parameters. This is useful to generate a URI from a route name (method getUri), without giving all parameters values</p></dd>
+						<dd><p>The route parameters. This array can have the following data :</p>
+
+<ul>
+                          <li>'action' string (required) : The controller method to call when the route is matched,
+                              formatted like this : 'ControllerClass.method'
+                          </li>
+                          <li>'where' array (optionnal) : An array defining each parameter pattern,
+                              where keys are the names of the route parameters,
+                              and values are the regular expression to match (without delimiters).
+                          </li>
+                          <li>'default' array (optionnal) : An array defining the default values of parameters.
+                              This is useful to generate a URI from a route name (method getUri),
+                              without giving all parameters values
+                          </li>
+                      </ul></dd>
 					</dl></div>
 
 
@@ -519,7 +566,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_patch">#</a>
-			<code><a href="source-class-Hawk.Router.html#207-218" title="Go to source code">patch</a>( <span>string <var>$name</var></span>, <span>string <var>$url</var></span>, <span>array <var>$param</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#274-296" title="Go to source code">patch</a>( <span>string <var>$name</var></span>, <span>string <var>$path</var></span>, <span>array <var>$param</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a route acessible by PATCH HTTP requests</p>
@@ -533,13 +580,24 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
 						<dd>The route name. This name must be unique for each route</dd>
-						<dt><var>$url</var></dt>
-						<dd>$uri The route URI, defined like : /path/{param1}/to/{param2}</dd>
+						<dt><var>$path</var></dt>
+						<dd>The route path, defined like : /path/{param1}/to/{param2}</dd>
 						<dt><var>$param</var></dt>
-						<dd><p>The route parameters. This array can have the following data :
-                    - 'action' string (required) : The controller method to call when the route is matched. formatted like this : 'ControllerClass.method'
-                    - 'where' array (optionnal) : An array defining each parameter pattern, where keys are the names of the route parameters, and values are the regular expression to match (without delimiters)
-                    - 'default' array (optionnal) : An array defining the default values of parameters. This is useful to generate a URI from a route name (method getUri), without giving all parameters values</p></dd>
+						<dd><p>The route parameters. This array can have the following data :</p>
+
+<ul>
+                          <li>'action' string (required) : The controller method to call when the route is matched,
+                              formatted like this : 'ControllerClass.method'
+                          </li>
+                          <li>'where' array (optionnal) : An array defining each parameter pattern,
+                              where keys are the names of the route parameters,
+                              and values are the regular expression to match (without delimiters).
+                          </li>
+                          <li>'default' array (optionnal) : An array defining the default values of parameters.
+                              This is useful to generate a URI from a route name (method getUri),
+                              without giving all parameters values
+                          </li>
+                      </ul></dd>
 					</dl></div>
 
 
@@ -560,7 +618,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_any">#</a>
-			<code><a href="source-class-Hawk.Router.html#220-231" title="Go to source code">any</a>( <span>string <var>$name</var></span>, <span>string <var>$url</var></span>, <span>array <var>$param</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#298-320" title="Go to source code">any</a>( <span>string <var>$name</var></span>, <span>string <var>$path</var></span>, <span>array <var>$param</var></span> )</code>
 
 			<div class="description short">
 				<p>Add a route acessible by GET, POST OR DELETE HTTP requests</p>
@@ -574,13 +632,24 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
 						<dd>The route name. This name must be unique for each route</dd>
-						<dt><var>$url</var></dt>
-						<dd>$uri The route URI, defined like : /path/{param1}/to/{param2}</dd>
+						<dt><var>$path</var></dt>
+						<dd>The route path, defined like : /path/{param1}/to/{param2}</dd>
 						<dt><var>$param</var></dt>
-						<dd><p>The route parameters. This array can have the following data :
-                    - 'action' string (required) : The controller method to call when the route is matched. formatted like this : 'ControllerClass.method'
-                    - 'where' array (optionnal) : An array defining each parameter pattern, where keys are the names of the route parameters, and values are the regular expression to match (without delimiters)
-                    - 'default' array (optionnal) : An array defining the default values of parameters. This is useful to generate a URI from a route name (method getUri), without giving all parameters values</p></dd>
+						<dd><p>The route parameters. This array can have the following data :</p>
+
+<ul>
+                          <li>'action' string (required) : The controller method to call when the route is matched,
+                              formatted like this : 'ControllerClass.method'
+                          </li>
+                          <li>'where' array (optionnal) : An array defining each parameter pattern,
+                              where keys are the names of the route parameters,
+                              and values are the regular expression to match (without delimiters).
+                          </li>
+                          <li>'default' array (optionnal) : An array defining the default values of parameters.
+                              This is useful to generate a URI from a route name (method getUri),
+                              without giving all parameters values
+                          </li>
+                      </ul></dd>
 					</dl></div>
 
 
@@ -601,7 +670,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_route">#</a>
-			<code><a href="source-class-Hawk.Router.html#234-295" title="Go to source code">route</a>( )</code>
+			<code><a href="source-class-Hawk.Router.html#323-396" title="Go to source code">route</a>( )</code>
 
 			<div class="description short">
 				<p>Compute the routing, and execute the controller method associated to the URI</p>
@@ -630,7 +699,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRoutes">#</a>
-			<code><a href="source-class-Hawk.Router.html#298-304" title="Go to source code">getRoutes</a>( )</code>
+			<code><a href="source-class-Hawk.Router.html#399-406" title="Go to source code">getRoutes</a>( )</code>
 
 			<div class="description short">
 				<p>Get all defined routes</p>
@@ -663,7 +732,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getActiveRoutes">#</a>
-			<code><a href="source-class-Hawk.Router.html#306-312" title="Go to source code">getActiveRoutes</a>( )</code>
+			<code><a href="source-class-Hawk.Router.html#408-415" title="Go to source code">getActiveRoutes</a>( )</code>
 
 			<div class="description short">
 				<p>Get the routes accessible for the current HTTP request method</p>
@@ -696,7 +765,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentRoute">#</a>
-			<code><a href="source-class-Hawk.Router.html#315-321" title="Go to source code">getCurrentRoute</a>( )</code>
+			<code><a href="source-class-Hawk.Router.html#418-425" title="Go to source code">getCurrentRoute</a>( )</code>
 
 			<div class="description short">
 				<p>Get the route corresponding to the current HTTP request</p>
@@ -729,7 +798,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentAction">#</a>
-			<code><a href="source-class-Hawk.Router.html#323-330" title="Go to source code">getCurrentAction</a>( )</code>
+			<code><a href="source-class-Hawk.Router.html#427-434" title="Go to source code">getCurrentAction</a>( )</code>
 
 			<div class="description short">
 				<p>Get the action parameter of the current route</p>
@@ -746,10 +815,6 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					</div>
 
 
-					<h4>See</h4>
-					<div class="list">
-							<code><a href="class-Hawk.Router.html#_getCurrentRoute">Hawk\Router::getCurrentRoute()</a></code><br>
-					</div>
 
 
 			</div>
@@ -766,7 +831,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentController">#</a>
-			<code><a href="source-class-Hawk.Router.html#332-338" title="Go to source code">getCurrentController</a>( )</code>
+			<code><a href="source-class-Hawk.Router.html#436-443" title="Go to source code">getCurrentController</a>( )</code>
 
 			<div class="description short">
 				<p>Get the last instanciated controller</p>
@@ -799,14 +864,14 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUri">#</a>
-			<code><a href="source-class-Hawk.Router.html#340-369" title="Go to source code">getUri</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Router.html#445-476" title="Go to source code">getUri</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
-				<p>Generate an URI from a given controller method (or route name) and its arguments. if $method is not set, then returns the current URI, relative to the site root URL</p>
+				<p>Generate an URI from a given controller method (or route name) and its arguments.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Generate an URI from a given controller method (or route name) and its arguments. if $method is not set, then returns the current URI, relative to the site root URL</p>
+				<p>Generate an URI from a given controller method (or route name) and its arguments.</p>
 
 
 					<h4>Parameters</h4>
@@ -839,14 +904,14 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUrl">#</a>
-			<code><a href="source-class-Hawk.Router.html#372-381" title="Go to source code">getUrl</a>( <span>string <var>$name</var> = <span class="php-quote">''</span></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Hawk.Router.html#479-489" title="Go to source code">getUrl</a>( <span>string <var>$name</var> = <span class="php-quote">''</span></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
-				<p>Generate a full URL from a given controller method (or route name) and its arguments. if $method is not set, then returns the current URL</p>
+				<p>Generate a full URL from a given controller method (or route name) and its arguments.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Generate a full URL from a given controller method (or route name) and its arguments. if $method is not set, then returns the current URL</p>
+				<p>Generate a full URL from a given controller method (or route name) and its arguments.</p>
 
 
 					<h4>Parameters</h4>
@@ -863,10 +928,6 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					</div>
 
 
-					<h4>See</h4>
-					<div class="list">
-							<code><a href="class-Hawk.Router.html#_getUri">Hawk\Router::getUri()</a></code><br>
-					</div>
 
 
 			</div>
@@ -883,7 +944,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRouteByAction">#</a>
-			<code><a href="source-class-Hawk.Router.html#384-397" title="Go to source code">getRouteByAction</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var>,…</span> )</code>
+			<code><a href="source-class-Hawk.Router.html#492-506" title="Go to source code">getRouteByAction</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a route by action</p>
@@ -897,8 +958,6 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
 						<dd>The route name of the controller method, formatted like this : 'ControllerClass.method'</dd>
-						<dt><var>$args</var>,…</dt>
-						<dd>The route arguments, where keys define the parameters names and values, the values to affect.</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -923,7 +982,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRouteByUri">#</a>
-			<code><a href="source-class-Hawk.Router.html#400-413" title="Go to source code">getRouteByUri</a>( <span>string <var>$uri</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#509-524" title="Go to source code">getRouteByUri</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Find a route from an URI</p>
@@ -935,8 +994,8 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$uri</var></dt>
-						<dd>The uri to search the associated route</dd>
+						<dt><var>$path</var></dt>
+						<dd>The path to search the associated route</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -954,14 +1013,14 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 
 			<td class="attributes"><code>
 				 public 
-				
+				<code><a href="class-Hawk.Route.html">Hawk\Route</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRouteByName">#</a>
-			<code><a href="source-class-Hawk.Router.html#416-422" title="Go to source code">getRouteByName</a>( <span>string <var>$name</var></span> )</code>
+			<code><a href="source-class-Hawk.Router.html#527-536" title="Go to source code">getRouteByName</a>( <span>string <var>$name</var></span> )</code>
 
 			<div class="description short">
 				<p>Get a route by it name</p>
@@ -977,6 +1036,10 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 						<dd>The route name</dd>
 					</dl></div>
 
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Hawk.Route.html">Hawk\Route</a></code><br>The found route
+					</div>
 
 
 
@@ -1009,7 +1072,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 				<td class="attributes"><code>string</code></td>
 				<td class="name">
 					<code>
-						<a href="source-class-Hawk.Router.html#15-18" title="Go to source code"><b>INVALID_URL</b></a>
+						<a href="source-class-Hawk.Router.html#17-20" title="Go to source code"><b>INVALID_URL</b></a>
 					</code>
 
 					<div class="description short">
@@ -1044,7 +1107,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Router.html#53-56" title="Go to source code"><var>$instance</var></a>
+					<a href="source-class-Hawk.Router.html#56-59" title="Go to source code"><var>$instance</var></a>
 
 				<div class="description short">
 					<p>The router instance</p>
@@ -1077,7 +1140,7 @@ It can be used to set a prefix to a set of routes, a namespace for all routes ac
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

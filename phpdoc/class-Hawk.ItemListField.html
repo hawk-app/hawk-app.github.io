@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -188,10 +189,7 @@
 
 	<div class="description">
 	<p>This class describes the field displayed in a smart list.
-All properties of an instance of this class can be scalar, or a function taking as arguments :
--   $value The value of the cell
--   $field The field itself
--   $line All the values in the list results line</p>
+All properties of an instance of this class can be scalar, or a function taking as arguments : -    $value The value of the cell -    $field The field itself -    $line All the values in the list results line</p>
 	</div>
 
 
@@ -208,7 +206,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> List<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.ItemListField.html#10-300" title="Go to source code">ItemListField.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.ItemListField.html#11-343" title="Go to source code">ItemListField.php</a>
 		<br>
 	</div>
 
@@ -228,7 +226,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Hawk.ItemListField.html#141-158" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>array <var>$param</var></span>, <span><code><a href="class-Hawk.ItemList.html">Hawk\ItemList</a></code> <var>$list</var></span> )</code>
+			<code><a href="source-class-Hawk.ItemListField.html#160-178" title="Go to source code">__construct</a>( <span>string <var>$name</var></span>, <span>array <var>$param</var></span>, <span><code><a href="class-Hawk.ItemList.html">Hawk\ItemList</a></code> <var>$list</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructor</p>
@@ -245,7 +243,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 						<dt><var>$param</var></dt>
 						<dd>The field parameters</dd>
 						<dt><var>$list</var></dt>
-						<dd>list the field is associated with</dd>
+						<dd>The list the field is associated with</dd>
 					</dl></div>
 
 
@@ -266,7 +264,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSearchCondition">#</a>
-			<code><a href="source-class-Hawk.ItemListField.html#160-169" title="Go to source code">getSearchCondition</a>( <span>array <var>&amp; $binds</var></span> )</code>
+			<code><a href="source-class-Hawk.ItemListField.html#180-198" title="Go to source code">getSearchCondition</a>( <span>array <var>&amp; $binds</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the Search SQL expression on this field</p>
@@ -304,7 +302,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getInput">#</a>
-			<code><a href="source-class-Hawk.ItemListField.html#172-233" title="Go to source code">getInput</a>( )</code>
+			<code><a href="source-class-Hawk.ItemListField.html#201-272" title="Go to source code">getInput</a>( )</code>
 
 			<div class="description short">
 				<p>Get the input corresponding to the field</p>
@@ -337,7 +335,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_displaySearchInput">#</a>
-			<code><a href="source-class-Hawk.ItemListField.html#236-249" title="Go to source code">displaySearchInput</a>( )</code>
+			<code><a href="source-class-Hawk.ItemListField.html#275-289" title="Go to source code">displaySearchInput</a>( )</code>
 
 			<div class="description short">
 				<p>Display the search field in the list header</p>
@@ -370,7 +368,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_displayHeader">#</a>
-			<code><a href="source-class-Hawk.ItemListField.html#251-259" title="Go to source code">displayHeader</a>( )</code>
+			<code><a href="source-class-Hawk.ItemListField.html#291-300" title="Go to source code">displayHeader</a>( )</code>
 
 			<div class="description short">
 				<p>Display the field header</p>
@@ -403,7 +401,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_displayCell">#</a>
-			<code><a href="source-class-Hawk.ItemListField.html#261-298" title="Go to source code">displayCell</a>( <span>array <var>$lineIndex</var></span> )</code>
+			<code><a href="source-class-Hawk.ItemListField.html#302-341" title="Go to source code">displayCell</a>( <span>array <var>$lineIndex</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the displayed value</p>
@@ -453,7 +451,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#34-37" title="Go to source code"><var>$name</var></a>
+					<a href="source-class-Hawk.ItemListField.html#36-39" title="Go to source code"><var>$name</var></a>
 
 				<div class="description short">
 					<p>The name of the field in the list. Must be unique for each field in a list</p>
@@ -478,7 +476,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#39-43" title="Go to source code"><var>$field</var></a>
+					<a href="source-class-Hawk.ItemListField.html#41-46" title="Go to source code"><var>$field</var></a>
 
 				<div class="description short">
 					<p>The field name in the search table</p>
@@ -503,7 +501,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#45-49" title="Go to source code"><var>$class</var></a>
+					<a href="source-class-Hawk.ItemListField.html#48-53" title="Go to source code"><var>$class</var></a>
 
 				<div class="description short">
 					<p>The class attribute to add to the result cell</p>
@@ -528,7 +526,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#51-55" title="Go to source code"><var>$title</var></a>
+					<a href="source-class-Hawk.ItemListField.html#55-60" title="Go to source code"><var>$title</var></a>
 
 				<div class="description short">
 					<p>The 'title' attribute on hover on the cell</p>
@@ -553,7 +551,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#57-61" title="Go to source code"><var>$href</var></a>
+					<a href="source-class-Hawk.ItemListField.html#62-67" title="Go to source code"><var>$href</var></a>
 
 				<div class="description short">
 					<p>This property, if set, will permit to open the set URL in the target defined by the property $target on a click event</p>
@@ -578,7 +576,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#63-67" title="Go to source code"><var>$target</var></a>
+					<a href="source-class-Hawk.ItemListField.html#69-74" title="Go to source code"><var>$target</var></a>
 
 				<div class="description short">
 					<p>The target where to open the URL defined in $href property</p>
@@ -603,7 +601,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#69-73" title="Go to source code"><var>$onclick</var></a>
+					<a href="source-class-Hawk.ItemListField.html#76-81" title="Go to source code"><var>$onclick</var></a>
 
 				<div class="description short">
 					<p>The 'onclick' attribute</p>
@@ -628,7 +626,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#75-79" title="Go to source code"><var>$style</var></a>
+					<a href="source-class-Hawk.ItemListField.html#83-88" title="Go to source code"><var>$style</var></a>
 
 				<div class="description short">
 					<p>The 'style' attribute</p>
@@ -653,7 +651,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#81-85" title="Go to source code"><var>$unit</var></a>
+					<a href="source-class-Hawk.ItemListField.html#90-95" title="Go to source code"><var>$unit</var></a>
 
 				<div class="description short">
 					<p>A unit to add after the value of the cell</p>
@@ -678,7 +676,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#87-91" title="Go to source code"><var>$display</var></a>
+					<a href="source-class-Hawk.ItemListField.html#97-102" title="Go to source code"><var>$display</var></a>
 
 				<div class="description short">
 					<p>Define if you want a specific displaying for this cell</p>
@@ -703,7 +701,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#93-97" title="Go to source code"><var>$sort</var></a>
+					<a href="source-class-Hawk.ItemListField.html#104-109" title="Go to source code"><var>$sort</var></a>
 
 				<div class="description short">
 					<p>Display the widgets to sort the list by this field values</p>
@@ -728,7 +726,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#99-103" title="Go to source code"><var>$sortValue</var></a>
+					<a href="source-class-Hawk.ItemListField.html#111-116" title="Go to source code"><var>$sortValue</var></a>
 
 				<div class="description short">
 					<p>The sort value</p>
@@ -753,7 +751,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#105-109" title="Go to source code"><var>$search</var></a>
+					<a href="source-class-Hawk.ItemListField.html#118-123" title="Go to source code"><var>$search</var></a>
 
 				<div class="description short">
 					<p>Displays the serach input for this field</p>
@@ -778,7 +776,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#111-115" title="Go to source code"><var>$searchValue</var></a>
+					<a href="source-class-Hawk.ItemListField.html#125-130" title="Go to source code"><var>$searchValue</var></a>
 
 				<div class="description short">
 					<p>The search value</p>
@@ -803,7 +801,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#117-121" title="Go to source code"><var>$independant</var></a>
+					<a href="source-class-Hawk.ItemListField.html#132-137" title="Go to source code"><var>$independant</var></a>
 
 				<div class="description short">
 					<p>If set to true, this field will not be searched in the database</p>
@@ -828,7 +826,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#123-127" title="Go to source code"><var>$label</var></a>
+					<a href="source-class-Hawk.ItemListField.html#139-144" title="Go to source code"><var>$label</var></a>
 
 				<div class="description short">
 					<p>The label to display in the list header</p>
@@ -853,14 +851,14 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#129-133" title="Go to source code"><var>$hidden</var></a>
+					<a href="source-class-Hawk.ItemListField.html#146-151" title="Go to source code"><var>$hidden</var></a>
 
 				<div class="description short">
-					<p>if set to true, this field will appear in the DOM, but wille be not visible</p>
+					<p>If set to true, this field will appear in the DOM, but wille be not visible</p>
 				</div>
 
 				<div class="description detailed hidden">
-					<p>if set to true, this field will appear in the DOM, but wille be not visible</p>
+					<p>If set to true, this field will appear in the DOM, but wille be not visible</p>
 
 				</div>
 			</td>
@@ -878,7 +876,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.ItemListField.html#135-139" title="Go to source code"><var>$list</var></a>
+					<a href="source-class-Hawk.ItemListField.html#153-158" title="Go to source code"><var>$list</var></a>
 
 				<div class="description short">
 					<p>The list the field is associated with</p>
@@ -911,7 +909,7 @@ All properties of an instance of this class can be scalar, or a function taking 
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

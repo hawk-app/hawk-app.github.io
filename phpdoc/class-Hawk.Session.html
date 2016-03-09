@@ -104,6 +104,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -220,7 +221,7 @@ the session management (manage licences, number of simultaneous connections, ...
 		<b>Namespace:</b> <a href="namespace-Hawk.html">Hawk</a><br>
 		<b>Package:</b> Core<br>
 
-			<b>Located at</b> <a href="source-class-Hawk.Session.html#9-138" title="Go to source code">Session.php</a>
+			<b>Located at</b> <a href="source-class-Hawk.Session.html#11-157" title="Go to source code">Session.php</a>
 		<br>
 	</div>
 
@@ -240,7 +241,7 @@ the session management (manage licences, number of simultaneous connections, ...
 
 			<td class="name"><div>
 			<a class="anchor" href="#_init">#</a>
-			<code><a href="source-class-Hawk.Session.html#41-65" title="Go to source code">init</a>( )</code>
+			<code><a href="source-class-Hawk.Session.html#50-76" title="Go to source code">init</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize the session user</p>
@@ -269,7 +270,7 @@ the session management (manage licences, number of simultaneous connections, ...
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUser">#</a>
-			<code><a href="source-class-Hawk.Session.html#67-73" title="Go to source code">getUser</a>( )</code>
+			<code><a href="source-class-Hawk.Session.html#78-85" title="Go to source code">getUser</a>( )</code>
 
 			<div class="description short">
 				<p>Get the user of the current session</p>
@@ -302,7 +303,7 @@ the session management (manage licences, number of simultaneous connections, ...
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isLogged">#</a>
-			<code><a href="source-class-Hawk.Session.html#75-81" title="Go to source code">isLogged</a>( )</code>
+			<code><a href="source-class-Hawk.Session.html#87-94" title="Go to source code">isLogged</a>( )</code>
 
 			<div class="description short">
 				<p>Returns if the current user is logged or not</p>
@@ -335,7 +336,7 @@ the session management (manage licences, number of simultaneous connections, ...
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isAllowed">#</a>
-			<code><a href="source-class-Hawk.Session.html#84-91" title="Go to source code">isAllowed</a>( <span>string <var>$action</var></span> )</code>
+			<code><a href="source-class-Hawk.Session.html#97-106" title="Go to source code">isAllowed</a>( <span>string <var>$action</var></span> )</code>
 
 			<div class="description short">
 				<p>Check if the user is allowed to make action</p>
@@ -373,7 +374,7 @@ the session management (manage licences, number of simultaneous connections, ...
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setData">#</a>
-			<code><a href="source-class-Hawk.Session.html#94-108" title="Go to source code">setData</a>( <span>array <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+			<code><a href="source-class-Hawk.Session.html#109-126" title="Go to source code">setData</a>( <span>array <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Set data in session</p>
@@ -386,7 +387,9 @@ the session management (manage licences, number of simultaneous connections, ...
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$name</var></dt>
-						<dd>The variable name to set in the session. To set a parameter in a sub array, type 'index1.index2'. For example, to set the parameter $data['user']['name'], type 'user.name'</dd>
+						<dd><p>The variable name to set in the session.
+                    To set a parameter in a sub array, type 'index1.index2'.
+                    For example, to set the parameter $data['user']['name'], type 'user.name'</p></dd>
 						<dt><var>$value</var></dt>
 						<dd>The value to set</dd>
 					</dl></div>
@@ -409,7 +412,7 @@ the session management (manage licences, number of simultaneous connections, ...
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getData">#</a>
-			<code><a href="source-class-Hawk.Session.html#110-137" title="Go to source code">getData</a>( <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Hawk.Session.html#128-156" title="Go to source code">getData</a>( <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Get session data</p>
@@ -458,11 +461,11 @@ the session management (manage licences, number of simultaneous connections, ...
 		<tr data-order="instance" id="$instance">
 			<td class="attributes"><code>
 				protected static 
-				
+				array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Hawk.Session.html#35-38" title="Go to source code"><var>$instance</var></a>
+					<a href="source-class-Hawk.Session.html#42-47" title="Go to source code"><var>$instance</var></a>
 
 				<div class="description short">
 					<p>The session instance</p>
@@ -495,7 +498,7 @@ the session management (manage licences, number of simultaneous connections, ...
 		Hawk - PHP documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

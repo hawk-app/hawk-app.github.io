@@ -103,6 +103,7 @@
 				<li><a href="class-Hawk.HiddenInput.html">HiddenInput</a></li>
 				<li><a href="class-Hawk.HtmlInput.html">HtmlInput</a></li>
 				<li><a href="class-Hawk.HTTPRequest.html">HTTPRequest</a></li>
+				<li><a href="class-Hawk.Icon.html">Icon</a></li>
 				<li><a href="class-Hawk.Image.html">Image</a></li>
 				<li><a href="class-Hawk.IntegerInput.html">IntegerInput</a></li>
 				<li><a href="class-Hawk.ItemList.html">ItemList</a></li>
@@ -249,18 +250,19 @@ must extend this class for the application routes work.</p></td>
 	<td><p>This class is used to construct SQL WHERE expressions from arrays.
 This can be useful to build simple conditions without writing SQL query and manage binding values
 This class is used in classes Model, Form, ItemList to get data from the database.
-Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR field3 &lt; 12)', create an DBExample like :</p>
+Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR field3 &lt; 12)',
+create an DBExample like :</p>
 
 <pre><span class="php-keyword1">new</span> DBExample(<span class="php-keyword1">array</span>(
-    <span class="php-keyword1">array</span>(<span class="php-quote">'field1'</span> =&gt; <span class="php-quote">&quot;value1&quot;</span>),
-    <span class="php-keyword1">array</span>(<span class="php-quote">'$or'</span> =&gt; <span class="php-keyword1">array</span>(
-        <span class="php-keyword1">array</span>(
-            <span class="php-quote">'field2'</span> =&gt; <span class="php-quote">'$notnull'</span>
-        ),
-        <span class="php-keyword1">array</span>(
-            <span class="php-quote">'field3'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'$lt'</span> =&gt; <span class="php-num">12</span>)
-        )
-    ))
+       <span class="php-keyword1">array</span>(<span class="php-quote">'field1'</span> =&gt; <span class="php-quote">&quot;value1&quot;</span>),
+       <span class="php-keyword1">array</span>(<span class="php-quote">'$or'</span> =&gt; <span class="php-keyword1">array</span>(
+           <span class="php-keyword1">array</span>(
+               <span class="php-quote">'field2'</span> =&gt; <span class="php-quote">'$notnull'</span>
+           ),
+           <span class="php-keyword1">array</span>(
+               <span class="php-quote">'field3'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'$lt'</span> =&gt; <span class="php-num">12</span>)
+           )
+       ))
 ))</pre></td>
 </tr>
 <tr>
@@ -269,7 +271,7 @@ Example : To make the expression 'field1 = "value1" AND (field2 IS NOT NULL OR f
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.Dialogbox.html">Dialogbox</a></td>
-	<td>This class is used to display a whole tab with a sidebar on left</td>
+	<td>This class is used to display a dialogbox</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.EmailInput.html">EmailInput</a></td>
@@ -337,6 +339,10 @@ for instance short description of a set of inputs.</p></td>
 	<td>This class is used to send HTTP request and get the result</td>
 </tr>
 <tr>
+	<td class="name"><a href="class-Hawk.Icon.html">Icon</a></td>
+	<td>This class is used to display an icon</td>
+</tr>
+<tr>
 	<td class="name"><a href="class-Hawk.Image.html">Image</a></td>
 	<td>This class is used to treat images. This class can resize images, or compress them</td>
 </tr>
@@ -352,9 +358,9 @@ for instance short description of a set of inputs.</p></td>
 	<td class="name"><a href="class-Hawk.ItemListField.html">ItemListField</a></td>
 	<td><p>This class describes the field displayed in a smart list.
 All properties of an instance of this class can be scalar, or a function taking as arguments :
--   $value The value of the cell
--   $field The field itself
--   $line All the values in the list results line</p></td>
+   -    $value The value of the cell
+   -    $field The field itself
+   -    $line All the values in the list results line</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.JpegImage.html">JpegImage</a></td>
@@ -378,7 +384,8 @@ All properties of an instance of this class can be scalar, or a function taking 
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.Logger.html">Logger</a></td>
-	<td>This class is used to log data in /logs directory. You can use it to log the action of the users on the application, for example to make stats.</td>
+	<td><p>This class is used to log data in /logs directory.
+You can use it to log the action of the users on the application, for example to make stats.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.Mail.html">Mail</a></td>
@@ -412,7 +419,7 @@ To be displayed, an object must be a json string</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.Panel.html">Panel</a></td>
-	<td>This class is used to display a whole tab with a sidebar on left</td>
+	<td>This class is used to display a panel</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.PasswordInput.html">PasswordInput</a></td>
@@ -494,7 +501,7 @@ the session management (manage licences, number of simultaneous connections, ...
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.Tabs.html">Tabs</a></td>
-	<td>This class is used to display a whole tab with a sidebar on left</td>
+	<td>This class is used to display a tabset</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Hawk.TextareaInput.html">TextareaInput</a></td>
@@ -606,6 +613,6 @@ http://ckeditor.com/</p></td>
 	</div>
 </div>
 <script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?380323eea9f5dc8ea704772eea76e0e9a4c5a776"></script>
+<script src="elementlist.js?23e612dc8ff5c51f3cffb2f67952eb88be40af6e"></script>
 </body>
 </html>
